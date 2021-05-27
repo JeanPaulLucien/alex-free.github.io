@@ -3,7 +3,7 @@
     <head>
         <title>PowerPC Media Center 7</title>
     </head>
-    <body>
+    <body style="background-color:black; color:white;">
 
 <h1>PowerPC Media Center 7</h1>
 <p>By Alex Free. Version 6.x and below by 'Hugh Downs' ('OpenSourceMac' of Macintosh Garden) with contributions from Dan at ppclundite.</p>
@@ -23,13 +23,15 @@
 <li>Use a web interface over your local network that has 100% compatibility in Classilla, Netscape 4, Internet Explorer 5, and TenFourFox to download QuickTime 6 compatible media.</li>
 <li>Download URLs with TLS 1.3 support.</li>
 <li>Access the modern programs used by PPCMC in a Terminal.app window.</li>
-<li>Download SoundCloud Tracks.</li></ul>
+<li>Download SoundCloud Tracks.</li>
+<li>Burn And Rip CDs.</li>
+<li>Convert a folder of media files to WAVs and burn them automatically to a CD-R.</li></ul>
 
-<b>YouTube and Twitch options use Youtube-dlc, which may stop working if it becomes out of date. If you are getting errors when using these options, update YouTube-dlc with the App or the Web Interface.</b>
+<b>YouTube and Twitch options use Youtube-dl, which may stop working if it becomes out of date. If you are getting errors when using these options, update YouTube-dl with the App or the Web Interface.</b>
 
 <b>Not all resolutions may be available on some videos (although 360p is gaurenteed), if you see an error in Terminal.app about the format not being available try a different one (360p is guaranteed to work).</b>
 
-<p><a href=https://github.com/alex-free/powerpc-media-center>GitHub</a> || <a href=https://alex-free.github.io/ppcmc7/>Homepage</a> || <a href=http://macintoshgarden.org/apps/ppc-media-center-7x-youtube-streamer-downloader-convertor>Macintosh Garden</a> || <a href=https://forums.macrumors.com/threads/2-17-2021-ppcmc-7-2-2-beta-youtube-twitch-streaming-downloading-file-conversion-web-interface-more-for-panther-604-g3-g4-g5.2224743/>Official MacRumors Thread</a></p>
+<p><a href=https://github.com/alex-free/powerpc-media-center>GitHub</a> || <a href=https://alex-free.github.io/ppcmc7>Homepage</a> || <a href=http://macintoshgarden.org/apps/ppc-media-center-7x-youtube-streamer-downloader-convertor>Macintosh Garden</a> || <a href=https://forums.macrumors.com/threads/2-17-2021-ppcmc-7-2-2-beta-youtube-twitch-streaming-downloading-file-conversion-web-interface-more-for-panther-604-g3-g4-g5.2224743/>Official MacRumors Thread</a></p>
 
 <h2>Table Of Contents</h2>
 <ul><li><a href="#downloads">Downloads</a></li>
@@ -37,6 +39,7 @@
 <li><a href="#installingthewebinterface">Installing The Web Interface</a></li>
 <li><a href="#usingtheapp">Using The App</a></li>
 <li><a href="#usingthewebinterface">Using The Web Interface</a></li>
+<li><a href="#cds">Ripping And Burning CDs</a></li>
 <li><a href="#changelog">Changelog</a></li>
 <li><a href="#bundled">Bundled Programs</a></li>
 <li><a href="#licenses">Licenses</a></li>
@@ -45,13 +48,12 @@
 
 <a name=downloads><h2>Downloads</h2></a>
 
-<h3>Version 7.2.3 (3/1/2021, 1 Year of PPCMC 7.x!) - <a href="#changelog">What's New In This Update?</a></h3>
+<h3>Version 7.2.4 (5/26/2021) - <a href="#latest">What's New In This Update?</a></h3>
 
-<p>As of version 7.2.3, there are 3 releases of PowerPC Media Center 7 specifically optimized for their target operating system.</p>
+<ul><li><a href=https://github.com/alex-free/powerpc-media-center/releases/download/7.2.4/ppcmc_7.2.4_panther.zip>ppcmc_7.2.4_panther</a> runs on 604, G3, G4, and G5 Macs running Mac OS X 10.3.9-10.5.8.</li>
+<li><a href=https://github.com/alex-free/powerpc-media-center/releases/download/7.2.4/ppcmc_7.2.4_tiger.zip>ppcmc_7.2.4_tiger</a> runs on 604, G3, G4, and G5 Macs running Mac OS X 10.4.0-10.5.8.</li></ul>
 
-<ul><li><a href=https://github.com/alex-free/powerpc-media-center/releases/download/7.2.3/ppcmc_7.2.3_panther.zip>ppcmc_7.2.3_panther</a> runs on 604, G3, G4, and G5 Macs running Mac OS X 10.3.9 and above.</li>
-<li><a href=https://github.com/alex-free/powerpc-media-center/releases/download/7.2.3/ppcmc_7.2.3_tiger.zip>ppcmc_7.2.3_tiger</a> runs on 604, G3, G4, and G5 Macs running Mac OS X 10.4.0 and above.</li>
-<li><a href=https://github.com/alex-free/powerpc-media-center/releases/download/7.2.3/ppcmc_7.2.3_leopard.zip>ppcmc_7.2.3_leopard</a> runs on G4 and G5 Macs running Mac OS X 10.5.0 and above.</li></ul>
+<b>Intel Tiger and Leopard may or may not work since Rosetta is required, this is not tested. Snow Leopard on both PowerPC and Intel has been verified to NOT work with PPCMC 7 by <a href=https://forums.macrumors.com/threads/3-1-2021-ppcmc-7-2-3-youtube-twitch-streaming-downloading-file-conversion-web-interface-more-for-panther-604-g3-g4-g5.2224743/post-29925434>B S Magnet</a> on the MacRumors Forums (thanks for testing!).</b>
 
 <a name=installingtheapp><h2>Installing The App</h2></a>
 <p>Copy <code>PPCMC.app</code> into your <code>/Applications</code> folder. If you try to run PPCMC.app anywhere but the /Applications folder and or rename PPCMC.app you will be prompted to change it to <code>/Applications/PPCMC.app</code>.</p>
@@ -148,10 +150,49 @@ VLC and Mplayer can stream Twitch.tv and YouTube live streams. Some Twitch live 
 <h3>Displaying URLs With TLS 1.3 Support</h3>
 <p>The Display URL option allows you to view websites within the web page using up to TLS 1.3. HTML, mostly text based pages work best. Viewing websites in this way is static. Websites that partially work include wikipedia.org, macintoshgarden.com (even downloads), macos9lives.com, and YouTube.com (no streaming obviously). Keep in mind this results in something broken but most times readable and better then nothing.</p>
 
+<a name=cds><h2>Burning And Ripping CDs</h2></a>
+
+<p>As of PowerPC Media Center 7.2.4, PowerPC Media Center can burn and rip CDs. To use this functionality, Open PPCMC.app, and double click <code>CD Options</code>. You will be presented with the following options:</p>
+
+<ul><li><code>Burn Audio CD</code> - Allows you to select an existing <code>.toc</code> or <code>.cue</code> file and burn a standard audio CD</li>
+<li><code>Burn Data CD Or Mixed Mode Data+Audio CD</code> - Allows you to select an existing <code>.toc</code> or <code>.cue</code> file and burn either a data-only CD or a mixed mode CD with both audio and data. This option works for burning PSX/Playstation 1 backups and homebrew CDs. Other consoles like the Sega Saturn and Sega CD will also probably work with this option as it byte swaps audio data in mixed mode CDs automatically.</li>
+<li><code>Burn Folder Of WAVs To Audio CD</code> - Allows you to select an existing folder of *.WAV and or *.wav files to burn as a standard audio CD. This will also automatically create a <code>.cue</code> file in the folder of *.WAV and or *.wav files for future use, such as with the previously mentioned <code>Burn Audio CD</code> option in PPCMC7.</li>
+<li><code>Convert And Burn Folder Of Media Files To Audio CD</code> - Allows you to select an existing folder containing <b>any</b> media file type, automatically convert it to .wav, generate a <code>.cue</code> file, and then burn it to a standard Audio CD.</li>
+<li><code>Rip Audio CD</code> - Rips a standard Audio CD in raw mode.</li>
+<li><code>Rip Data CD Or Mixed Mode Data+Audio CD</code> - Rips a data or mixed mode data+audio cd in raw mode.  This option works for burning PSX/Playstation 1 backups and homebrew CDs. Other consoles like the Sega Saturn and Sega CD will also probably work with this option. Disregard the audio byte swap message at the end of ripping as PPCMC7 automatically does this when burning mixed mode data+audio CDs.</li></ul>
+
 <a name=changelog><h2>Changelog</h2></a>
 <p>Originally created by 'Hugh Downs' ('OpenSourceMac' of Macintosh Garden) with contributions from Dan at ppclundite, PowerPC Media Center was in development for 6 years until the last final update. All versions 7.0 and above have been worked on by Alex Free. 'Wicknix' of the MacRumors PPC forum is responsible for the Twitch.tv live stream support. 'Wowfunhappy' of the same site suggested a solution to make one FFMPEG work on G3's wltb AltiVec disabled but also G4's and G5's with AltiVec enabled.</p>
 
 <p>I am also very grateful for Thomas Bernard's SDL 2.0.3 patches for Mac OS X 10.4 PPC that I came across at https://gist.github.com/miniupnp/26d6e967570e5729a757 . I used the same changes but made new patch files for the SDL2 included within PPCMC.
+
+<a name=latest><h3>7.2.4 - 5/26/2021</h3></a>
+
+<h4>Bug Fixes</h4>
+
+<p>Fixed a bug which made QuickTime streaming not update to use a new URL.</p>
+<p>Fixed a bug where file conversions would have a higher bitrate then the option implied the limit was.</p>
+<p>Fixed a bug where G3/604 Macs would crash when using FFMPEG related features.</p>
+<p>Removed the Leopard optimized version to simplify and speed up future development since Panther_SDL2 does NOT build on Leopard correctly (RUNS fine on Leopard if built on Tiger), just use the Tiger version on Leopard for right now.</p>
+<p>Fixed the download any url option to use the get_url function.</p>
+
+<h4>New Features</h4>
+<p>Removed highlighting of the folders PPCMC generates per user request.</p>
+<p>Changed youtube-dl to execute the main .py script directly with no decompression for a performance and speed boost.</p>
+<p>Changed youtube-dl to update to the latest git commit on GitHub directly  so users can get new features and updates without waiting for it to be packaged into a release.</p>
+<p>Significantly optimized and cleaned up how real youtube-dl URLs are retrieved in the Applescript code by condensing the many multiple functions into just one.</p>
+<p>Added a new "CD Options" category to the main menu, with the following sub options: "Burn Audio CD", "Burn Data CD Or Mixed Mode Data+Audio CD", "Burn Folder Of WAVs To Audio CD", "Convert And Burn Folder Of Media Files To Audio CD", "Rip Audio CD", "Rip Data CD Or Mixed Mode Data+Audio CD". All of which use the newly included cdrdao.</p>
+
+<h4>New Updates To Bundled Software</h4>
+<p>Updated FFMPEG/FFPLAY/FFPROBE to the latest version 4.4 and removed altivec patches since they are no longer needed.</p>
+<p>Updated the internal certificate to the latest 4-13 version extracted by the cURL project on April 13th 2021.</p>
+<p>Updated OpenSSL to the latest version 1.1.1k.</p>
+<p>Updated Curl to the latest version 7.61.1 and removed the min macosx version min patch since it is no longer needed.</p>
+
+<h4>New Bundled Software</h4>
+<p>Added cdrdao v1.2.0.</p>
+<p>Added the latest version of git v2.31.1</p>
+<p>Added the latest version 0.29.2 of pkg-config.</p>
 
 <h3>7.2.3 - 3/1/2021, This Release Had More Delays Then CyberPunk 2077...</h3>
 <p>All streaming options have been rewritten to use direct video URLs, execute in the background, and not use Terminal.app. All of these changes improve CPU/RAM usage and UX.</p>
@@ -304,20 +345,24 @@ MP3 @320KB/s Bitrate</p>
 
 <a name=bundled><h2>Bundled Programs</h2></a>
 
-<p>PowerPC Media Center would not be possible without the work of many others, and their awesome projects all listed below.</p>
-<ul><li>OpenSSL 3.0 Alpha 12 - <a href=https://www.openssl.org/source>https://www.openssl.org/source</a></li>
-<li>Curl 7.75.0 - <a href=https://curl.se/download.html>https://curl.se/download.html</a></li>
+<p>PowerPC Media Center would not be possible without the work of many others, and their awesome projects all listed below!</p>
+<ul><li>OpenSSL 1.1.1k - <a href=https://www.openssl.org/source>https://www.openssl.org/source</a></li>
+<li>Curl 7.76.1 - <a href=https://curl.se/download.html>https://curl.se/download.html</a></li>
 <li>Panther_SDL2 2.0.3 (current main SDL2 release is version 2.0.14) - <a href=https://github.com/alex-free/panther_sdl2>https://github.com/alex-free/panther_sdl2</a>, <a href=https://www.libsdl.org/download-2.0.php>https://www.libsdl.org/download-2.0.php</a></li>
-<li>FFMPEG 4.3.2 (includes FFplay and FFprobe) <a href=https://ffmpeg.org/download.html>https://ffmpeg.org/download.html</a></li>
+<li>FFMPEG 4.4 (includes FFplay and FFprobe) <a href=https://ffmpeg.org/download.html>https://ffmpeg.org/download.html</a></li>
 <li>Python 3.6.13 (latest Python 3.6, current Python release is version 3.9.2) <a href=https://www.python.org/downloads>https://www.python.org/downloads</a></li>
 <li>LAMEVMX 3.100 <a href=https://github.com/classilla/lamevmx>https://github.com/classilla/lamevmx</a>, <a href=https://lame.sourceforge.io>https://lame.sourceforge.io</a> </li>
 <li>Zlib 1.2.11 - <a href=https://zlib.net>https://zlib.net</a></li>
-<li>Mozilla's CA PEM extracted by the cURL project on 1/19/2021 - <a href=https://curl.se/docs/caextract.html>https://curl.se/docs/caextract.html</a></li>
+<li>Mozilla's CA PEM extracted by the cURL project on 4/13/2021 - <a href=https://curl.se/docs/caextract.html>https://curl.se/docs/caextract.html</a></li>
 <li>Bzip2 1.0.8 - <a href=https://www.sourceware.org/bzip2>https://www.sourceware.org/bzip2</a></li>
-<li>YouTube-dl version 2021.2.22 - <a href=https://ytdl-org.github.io/youtube-dl/download.html>https://ytdl-org.github.io/youtube-dl/download.html</a></li> 
+<li>YouTube-dl version 2021.5.16 - <a href=https://ytdl-org.github.io/youtube-dl/download.html>https://ytdl-org.github.io/youtube-dl/download.html</a></li> 
 <li>AtomicParsley version 0.9.0 - <a href=http://atomicparsley.sourceforge.net/>http://atomicparsley.sourceforge.net</a></li>
+<li>Git version 2.31.1 - <a href=https://git-scm.com/>https://git-scm.com</a></li>
+<li>CDRdao version 1.2.0 (latest version is 1.2.4) - <a href=http://cdrdao.sourceforge.net/>http://cdrdao.sourceforge.net</a></li>
+<li>PKG-config version 0.29.2 - <a href=https://www.freedesktop.org/wiki/Software/pkg-config/>https://www.freedesktop.org/wiki/Software/pkg-config</a></li>
 </ul>
-<p>Unless otherwise noted, each program is the newest version and up to date as of this release on 3/1/2021.</p>
+
+<p>Unless otherwise noted, each program is the newest version and up to date as of this release on 5/26/2021.</p>
 
 <a name=licenses><h2>Licenses</h2></a>
 <p>PPCMC itself is released into the Public Domain, however it uses many dependency programs under different terms. All licenses are distributed within each release, in the 'licenses' folder. PPCMC is entirely open source, all patches, source code, and build scripts are available in the separate source download.</p>
