@@ -11,16 +11,17 @@
 
 <p>TonyHax Boot CD is <a href=https://orca.pet/tonyhax/>TonyHax</a> without the Hax, Tony, and memory card or specific game requirements.</p>
 
-<h2>Downloads</h2>
+<p><b>UPDATE:</b> My <a href=https://github.com/socram8888/tonyhax/pull/88>Pull Request</a> got merged into TonyHax by the developer, who is now distributing newer up to date boot disc BIN+CUE files in the <a href=https://github.com/socram8888/tonyhax/releases>TonyHax Github Releases</a>.</p>
+
+<h2>Download</h2>
 
 <ul><li><a href=https://github.com/alex-free/tonyhax-boot-cd/releases/download/1.3.5/tonyhax-boot-cd-1.3.5.zip>TonyHax Boot CD v1.3.5</a></li></ul>
 
 <h2>Table Of Contents</h2>
 
 <ul><li><a href=#what>Wait What? I Don't Need A Supported Game Or Even A Memory Card? What's The Catch?</a></li>
-<li><a href=#toonew>But My Console Has A Serial Number That Is 592xxx Or Higher!</a></li>
+<li><a href=#how2use>I Have An Early PSX Console With A Serial Number Lower Then 592xxx, What Do I Do?</a></li>
 <li><a href=#how2burn>What's The Best Way To Burn This TonyHax Boot CD, And My Backups/Homebrew?</a></li>
-<li><a href=#ideal>I Have An Early PSX Console With A Serial Number Lower Then 592xxx, Tell Me What To Do Already!</a></li>
 <li><a href=#helpbootingcdrs>My Playstation Won't Boot Legit Games Or Will Boot Legit Games But Not My Burned CDs?</a></li>
 <li><a href=#buildcd>What If I Want To Build The CD BIN+CUE Myself?</a></li>
 <li><a href=#changelog>Changelog</a></li>
@@ -30,9 +31,16 @@
 
 <p>The catch is <b>the easist consoles to use the TonyHax Boot CD on are the super ultra rare early American ones with a serial number lower then 592xxx</b> (according to the OG <a href=https://gamefaqs.gamespot.com/ps/916392-playstation/faqs/4708>Swap Trick Guide</a> from 1996). My Playstation was manufactured in October of 1995, serial number 5768605 and this works perfectly.</p>
 
-<a name=toonew><h2>But My Console Has A Serial Number That Is 592xxx Or Higher!</h2></a>
+<a name=how2use><h2>I Have An Early PSX Console With A Serial Number Lower Then 592xxx, What Do I Do?</h2></a>
 
-<p>TonyHax Boot CD can still be used, it will just be much harder since you have to pull of a more difficult swap trick to work (pick one from the OG <a href=https://gamefaqs.gamespot.com/ps/916392-playstation/faqs/4708>Swap Trick Guide</a> from 1996). You'll proably have to the double swap trick is indeed real and I've done it but it can take HOURS to do right. At least now if you do it right it will definitely have the correct TOC and boot the burned game/homebrew and any future CDs (such as disc 2 of a game) correctly! There still is a reason to use this on these newer consoles.</p>
+<p>Okay, okay. So this is the ingenious idea around this boot cd. These early consoles are susceptible to the <code>METHOD ONE:  The Audio Menu [Safe and very easy]</code> swap trick. For the past 24 years this had one issue, the original TOC of the legit game disc would be used. This mostly worked but you'd get issues with some games not booting or messed up audio, and you'd have to hot swap trick <a href=https://www.dreamcast-talk.com/forum/viewtopic.php?f=17&t=14384>again</a> if it was a multi-disc game at some point (many people incorrectly said playing multi-disc PSX games with just the swap method was not possible!). But by using TonyHAX, you can swap the TonyHax boot cd using this method <b>with any legit game</b> and then once the TonyHax Boot CD is booted you can swap your backup/homebrew! Finally, this is how you pull it off:</p>
+
+<ul><li>Turn on the Playstation 1 with <b>No</b> CD/game inserted and select the CD Player in the main menu.</li>
+<li>Open the CD drive. Place <b>any legit game disc that the console can read normally</b> into the drive.</li>
+<li>Now you need to block the lid sensor which is a circle to the right of the CD drive so that the Playstation thinks the lid is closed. In my opinion, the easist thing to do is to take a hunk of aluminum foil and mold it to the right size to the length from the pointy bit which normally would press down this sensor to the sensor button in the fully depressed state. You just need the PSX to think the lid is closed. Once you do this, the legit game disc will spin for a second, and then suddenly stop and display at least one track in the CD Player menu.</li>
+<li>Okay, so right now your Playstation should have a legit game disc which is not moving and stopped in the CD drive, and something blocking the sensor so the console thinks the CD drive is still closed. Now, remove that legit game disc and replace it with your burned TonyHax Boot CD. Use the controller to then exit the CD Player menu, and wait. The PSX will show the black license screen and proceed to boot the TonyHAX Boot CD.</li>
+<li>Now you can remove whatever you jammed into that lid sensor, wait for the burned TonyHax Boot CD to stop spinning, remove it, and put in the burned backup game or homebrew CD you actually want to play! Then close the Playstation's lid, and play like normal.</li></ul>
+
 
 <a name=how2burn><h2>What's The Best Way To Burn This TonyHax Boot CD, And My Backups/Homebrew?</h2></a>
 
@@ -46,16 +54,6 @@
 <p>Note: You'll probably have to add a <code>--device</code> argument if this is not automatically detected. For PowerPC Macs this is either <code>IODVDServices</code> or <code>IOCompactDiscServices</code>. On Fedora Linux it's <code>/dev/cdrom</code>.</p>
 
 <p>Of course other programs will probably work, but <b>make sure you burn at the slowest speed your drive supports!</b>.</p>
-
-<a name=ideal><h2>I Have An Early PSX Console With A Serial Number Lower Then 592xxx, Tell Me What To Do Already!</h2></a>
-
-<p>Okay, okay. So this is the ingenious idea around this boot cd. These early consoles are susceptible to the <code>METHOD ONE:  The Audio Menu [Safe and very easy]</code> swap trick. For the past 24 years this had one issue, the original TOC of the legit game disc would be used. This mostly worked but you'd get issues with some games not booting or messed up audio, and you'd have to hot swap trick <a href=https://www.dreamcast-talk.com/forum/viewtopic.php?f=17&t=14384>again</a> if it was a multi-disc game at some point (many people incorrectly said playing multi-disc PSX games with just the swap method was not possible!). But by using TonyHAX, you can swap the TonyHax boot cd using this method <b>with any legit game</b> and then once the TonyHax Boot CD is booted you can swap your backup/homebrew! Finally, this is how you pull it off:</p>
-
-<ul><li>Turn on the Playstation 1 with <b>No</b> CD/game inserted and select the CD Player in the main menu.</li>
-<li>Open the CD drive. Place <b>any legit game disc that the console can read normally</b> into the drive.</li>
-<li>Now you need to block the lid sensor which is a circle to the right of the CD drive so that the Playstation thinks the lid is closed. In my opinion, the easist thing to do is to take a hunk of aluminum foil and mold it to the right size to the length from the pointy bit which normally would press down this sensor to the sensor button in the fully depressed state. You just need the PSX to think the lid is closed. Once you do this, the legit game disc will spin for a second, and then suddenly stop and display at least one track in the CD Player menu.</li>
-<li>Okay, so right now your Playstation should have a legit game disc which is not moving and stopped in the CD drive, and something blocking the sensor so the console thinks the CD drive is still closed. Now, remove that legit game disc and replace it with your burned TonyHax Boot CD. Use the controller to then exit the CD Player menu, and wait. The PSX will show the black license screen and proceed to boot the TonyHAX Boot CD.</li>
-<li>Now you can remove whatever you jammed into that lid sensor, wait for the burned TonyHax Boot CD to stop spinning, remove it, and put in the burned backup game or homebrew CD you actually want to play! Then close the Playstation's lid, and play like normal.</li></ul>
 
 <a name=helpbootingcdrs><h2>My Playstation Won't Boot Legit Games Or Will Boot Legit Games But Not My Burned CDs?</h2></a>
 
