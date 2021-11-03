@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TOCPerfect</title>
+    </head>
+<body style="background-color:black; color:white;">
+
+<h1>TOCPerfect - Modify PSX Games To Use The Original TOC When Using The CD Player Swap Trick</h1>
+
+<p>By Alex Free</p>
+
+<p><a href=https://alex-free.github.io/tocperfect>Homepage</a> | <a href=https://github.com/alex-free/tonyhax>GitHub</a></p>
+
+<p>TOCPerfect takes an existing PSX game's data track 1 .bin file and modifies it to automatically re-read TOC data and unlock the Playstation's drive before booting the original game executable. The reason to do this, is to gain perfect TOC compatibility/CD audio and to enable the use of multi disc games while using the Audio Menu Swap Trick.</p>
+
+<p>This means the real Playstation game you start with to do the Audio Menu Swap Trick doesn't matter. As long as your desired backup is a <a href="#compatibility">TOCPerfect compatibile game</a> your TOCPerfect modified backup will always have correct working CD audio <b>when using any swap trick</b>.</p>
+
+<h2>Table Of Contents</h2>
+<ul><li><a href="#downloads">Downloads</a></li>
+<li><a href="#audio_swap_trick">About The Audio Menu Swap Trick</a></li>
+<li><a href="#usage">Modifying A Game With TOCPerfect</a></li>
+<li><a href="#compatibility">Game Compatibility List And Limitations</a></li>
+<li><a href="#changelog">Changlog</a></li>
+<li><a href="#bundled_software">Bundled Software & Licensing</a></ul>
+
+<a name=downloads><h2>Downloads</h2></a>
+
+<h3>Version 1.0 (11/3/2021)</h3>
+<ul><li><a href=https://github.com/alex-free/tonyhax/releases/download/v1.0tp/tocperfect-1.0-windows.zip>TOCPerfect v1.0 <i>for Windows 7 64 bit and above</i></a></li></ul>
+
+<a name=audio_swap_trick><h2>About The Audio Menu Swap Trick</h2></a>
+
+<p>The Audio Menu Swap Trick is an exploit only available on Playstation consoles with a serial number lower then <code>592xxx</code> (found on the bottom of the Playstation). It was first written about in the original <a href=https://gamefaqs.gamespot.com/ps/916392-playstation/faqs/4708>Swap Trick Guide</a>.</p>
+
+<p>This is how to do it:</p>
+
+<ul><li>Turn on the Playstation with no game in it.</li>
+<li>Start the CD player.</li>
+<li>Open the Playstation's lid, and put in a real legit Playstation game.</li>
+<li>Find something to press the lid sensor (a circle found in the right corner of the Playstation under the lid) down. The legit Playstation game will start spinning and then stop spinning.</li>
+<li>Once the legit Playstation game stops spinning, put in your backup game or homebrew.</li>
+<li>Exit the CD Player menu, and wait for your backup game or homebrew to spin up and load.</li></ul>
+
+<p>Sounds too good to be true right? Well for years, there was one single issue. The TOC of the real legit Playstation game would be used for the backup game or homebrew.</p>
+
+<p>After <a href=https://github.com/socram8888/tonyhax>TonyHAX</a> came out, I figured out that the <code>TONYHAX.EXE</code> could be put on it's own CD. Then you could Audio Menu Swap Trick that 'TonyHAX Boot CD', and then put in game backup or homebrew that would work perfectly. I released the <a href=https://alex-free.github.io/tonyhax-boot-cd/>TonyHAX Boot CD</a>, and then <a href=https://github.com/socram8888/tonyhax/pull/88>got it in the official TONYHAX</a>.</p>
+
+<p>The benefits of the TonyHAX Boot CD are that you don't need any memory cards, or specific TonyHAX exploitable game. Just an Audio Menu Swap Trick compatible console (although technically it would work with other swap tricks).</p>
+
+<p>TOCPerfect takes this one step further. Do we really need to first boot a TonyHAX Boot CD with the swap trick, and then change to the backup game/homebrew? If we can already execute code with the Audio Menu Swap Trick, why not modify the game backup/homebrew to do what the TonyHAX Boot CD does, as well as re-reading the backup's TOC and booting it's executable? In some cases, this actually works.</p>
+
+<a name=usage><h2>Modifying A Game With TOCPerfect</h2></a>
+
+<p>You need a bash shell, I recommend installing <a href=https://www.msys2.org/>MSYS2</a>. After doing so, open the MSYS2 terminal/shell.</p>
+
+<p>After downloading the latest release of TOCPerfect, extract it and go to the extracted directory. Run the <code>tocperfect</code> command with the MSYS2 shell. The first argument to the <code>tocperfect</code> command must be the path to the first track's bin file of the game you desire to modify.</p>
+
+<p>After running TOCPerfect, the track 1 bin file of the game you selected will be changed, and the original track 1 bin file will be renamed, ending with <code>.original</code>. You can then simply burn the game as usual, and it will now have working music after doing the <a href="#audio_swap_trick">Audio Menu Swap Trick</a>, or technically any swap trick.</p>
+
+<a name=compatibility><h2>Game Compatibility List And Limitations</h2></a>
+
+<p>Due to the fact that TOCPerfect modifies Playstation ISOs, some games may crash or not work because of either <b>absolute LBA addressing OR broken ripping by mkpsxiso</b>. I have tested a few games (and will update the table below as more are tested) as well as provided some compatibility notes below:</p>
+
+ <table>
+  <tr>
+    <th>Tested Game</th>
+    <th>Compatibility</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Tekken (1995) NTSC-U</td>
+    <td>Works almost perfectly.</td>
+    <td>For some reason, sometimes the Galaga mini game sometimes will never load tekken until you release the lid sensor and close the lid. This sometimes doesn't happen and it boots fine. Besides this, Tekken works perfect with all CD audio tracks.</td>
+  </tr>
+  <tr>
+    <td>Wipeout (1995) NTSC-U</td>
+    <td>Perfect.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Duke Nukem: Total Meltdown (1997) NTSC-U</td>
+    <td>Seems to work.</td>
+    <td>Uses the correct CD audio on stage 1. However ISOdump creates a signifigantly bigger image and complains about CDDA files contained in the data track 1, saying it is using 'empty' audio tracks. The seperate audio tracks not in data track 1 however work perfect.</td>
+  </tr>
+    <td>Tomb Raider (1996) NTSC-U (v1.0/v1.1)</td>
+    <td>Doesn't work.</td>
+    <td>Crashes after FMV on first loading screen. Probably uses absolute LBA addressing.</td>
+  </tr>
+</table> 
+
+<a name=changelog><h2>Changelog</h2></a>
+
+<ul><li>Version 1.0 - 11/3/2021 - first release.</li></ul>
+
+<a name=bundled_software><h2>Bundled Software & Licensing</h2></a>
+
+<ul><li><a href=https://github.com/Lameguy64/mkpsxiso>MKPSXISO</a> - Latest as of 11/3/2021, built from source.</li>
+<li><a href=https://github.com/Lameguy64/isodump>ISODUMP</a> - Latest as of 11/3/2021, built from source.</li>
+<li><a href=https://github.com/alex-free/tonyhax>TonyHAX</a> - Latest of my own fork, based on the current TonyHAX loader from 11/3/2021.</li></ul>
+
+<p>MKPSXISO and ISODUMP are released under the GNU GPL v2.0 by <a href=https://github.com/Lameguy64>Lameguy64</a>. TonyHAX is released under the WTF license by <a href=https://github.com/socram8888>Socram8888</a>, however I Alex Free have forked and modified it to serve the purposes of TOCPerfect. My modifications and fork can be found <a href=https://github.com/alex-free/tonyhax>here</a>.</p>
+
+<p>Each release of TOCPerfect contains a directory containing all licensing info.</p>
+
+</html>
+
