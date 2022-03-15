@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ps1 demoswap patcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body style="background-color:black; color:white;" link="#58D3F7" alink="#FF00FF" vlink="#58D3F7">
+
+<center><h1><a href=https://alex-free.github.io>alex-free.github.io</a></h1></center>
+
+<h1 id="ps1-demoswap-patcher">PS1 DemoSwap Patcher</h1>
+<p>By: <a href="http://www.psxdev.net/forum/memberlist.php?mode=viewprofile&amp;u=867">MottZilla</a>. Ported to other operating systems by <a href="http://www.psxdev.net/forum/memberlist.php?mode=viewprofile&amp;u=6018">Alex Free</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>This program can:</p>
+<ul>
+<li>Patch various commonly found PS1 demo discs to load TonyHax for perfect backup and import booting. It uses a new single swap trick method for any PS1 console that requires you to have an authentic PS1 demo disc supported by PS1 DemoSwap Patcher, as well as a rip of it. </li>
+<li>Patch <strong>any</strong> game to load TonyHax prior to loading the main game executable. When you use a swap trick to boot a game patched in this way, all the limitations of any swap trick method go away. You get working CD audio and correct TOC data. You even gain the ability to swap to the next (burned backup) disc in games that span multiple discs without having to do another swap trick.</li>
+</ul>
+<h2 id="why">Why</h2>
+<p>I created this program and <a href="https://alex-free.github.io/ps1demoswap/MCTOOL_v10a.zip">MCTOOL</a> to give someone without access to commonly used tools a way to install and or use TonyHax and FreePSXBoot. No modded PS2 or PC memory card interface required.</p>
+<p>With the &#39;DemoSwap&#39; method you can use an authentic, commonly found demo disc and a patched CD-R of the same demo disc to boot TonyHax. TonyHax then enables you to run an import or CD-R disc. No tricky timing or fast reflexes required, and it works on any PS1 console. In this mode it will replace one of the demo executables in the track 01 bin file of a demo disc rip with TonyHax and by doing a simple disc swap while booted in the demo disc that works on any PS1 console you can load TonyHax. You must have an original authentic demo disc that is supported. It is recommended after starting TonyHax using the DemoSwap method to run <a href="https://alex-free.github.io/ps1demoswap/MCTOOL_v10a.zip">MCTOOL</a> to install FreePSXBoot + TonyHax onto a memory card.</p>
+<p>With the &#39;TOCPerfect&#39; method you can swap trick a patched CD-R of a backup game/import that will not have any of the downsides that normally come with using a swap trick to play a backup/import. The TOC data is re-read and the drive is unlocked so any patched backup you play with a swap trick will always have perfect audio and the ability to switch from i.e. game disc 1 to game disc 2 mid-game. <strong>This takes the swap trick as a backup method as far as possible. The TOCPerfect method is most useful for consoles with a serial number lower then 592xxx which can use the audio menu swap trick. This swap trick does not involve swapping a moving disc</strong>. The idea was first worked
+on by <a href="https://alex-free.github.io/tocperfect/">Alex Free</a>.</p>
+<h2 id="posts-about-ps1-demoswap-patcher-at-psxdev-net-http-psxdev-net-forum-">Posts About PS1 DemoSwap Patcher At <a href="http://psxdev.net/forum">psxdev.net</a></h2>
+<ul>
+<li><a href="http://www.psxdev.net/forum/viewtopic.php?f=66&amp;t=3881">TOCPerfect</a></li>
+<li><a href="http://www.psxdev.net/forum/viewtopic.php?f=66&amp;t=3910">MCTOOL</a></li>
+</ul>
+<h2 id="downloads">Downloads</h2>
+<h3 id="version-1-0-1-3-14-2022-">Version 1.0.1 (3/14/2022)</h3>
+<ul>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.1_win_x86.zip">Windows x86</a></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.1_mac_os_x.zip">Mac OS X</a> <em>For PowerPC, 32-bit Intel, and 64-bit Intel Macs running Mac OS X 10.3.9 and up.</em></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.1_linux_x86_static.zip">Linux x86</a> <em>For modern 32-bit Linux distros (static build).</em></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.1_linux_x86_64_static.zip">Linux x86_64</a> <em>For modern 64-bit Linux distros (static build).</em></li>
+</ul>
+<h3 id="version-1-0-2-28-2022-">Version 1.0 (2/28/2022)</h3>
+<ul>
+<li><a href="https://alex-free.github.io/ps1demoswap/PS1_DemoSwap_v1.0.zip">Windows x86</a></li>
+</ul>
+<h2 id="tocperfect-requirements">TOCPerfect Requirements</h2>
+<ul>
+<li>PS1 Console (NTSC/U or PAL).</li>
+<li>Any authentic PS1 game.</li>
+<li>A high quality blank CD-R.</li>
+<li>Backup of a ripped game.</li>
+<li>CD burner that can burn at a slow speed (8x or slower recommended).</li>
+</ul>
+<h2 id="tocperfect-instructions">TOCPerfect Instructions</h2>
+<p>TOCPerfect patch the first data track of the game you want to use. The first data track will be named something like &#39;track 01.bin&#39; in your game rip directory. </p>
+<p>On Windows you can:</p>
+<ul>
+<li>Drag and drop the &#39;track 01.bin&#39; file into the &#39;PS1 DemoSwap Patcher.exe&#39;, then select the TOCPerfect patch mode.</li>
+<li>Start &#39;PS1 DemoSwap Patcher.exe&#39;. Select the patch mode to TOCPerfect patch and then select the &#39;track 01.bin&#39; file in the GUI.</li>
+<li>Run &#39;PS1 DemoSwap Patcher.exe&#39; from &#39;cmd.exe&#39; as a CLI program. Sample:
+&#39;&quot;PS1 DemoSwap Patcher.exe&quot; -t track01.bin&#39;</li>
+</ul>
+<p>On other operating systems you can only use PS1 DemoSwap Patcher as a CLI. Sample:
+&#39;ps1demoswap -t track01.bin&#39;</p>
+<p>Burn the &#39;.cue&#39; file in your game rip directory after applying the TOCPerfect patch to a blank CD-R. Do a swap trick to boot your burned CD-R. When Tonyhax boots and says &#39;Swap CD Now&#39;, unjam the lid sensor and close the lid without touching the CD-R in the PS1. The game will then load with correct audio, TOC data, and an unlocked drive.</p>
+<p>If you have a console with a serial number lower then 592xxx then you can use the audio menu swap trick, which does not involve swapping a moving disc. There are more swap tricks for newer consoles that involve swapping a moving disc, written about at the original <a href="https://gamefaqs.gamespot.com/ps/916392-playstation/faqs/4708">swap trick guide</a> that could also be used. Alternatively, the DemoSwap method provides an easier single swap method to boot TonyHax on all PS1 consoles.</p>
+<p>Audio Menu Swap Trick:</p>
+<ol>
+<li>Turn on the PS1 console with no game in it. Start the CD player, then place a real psx game in the psx 
+console.</li>
+<li>Press the lid sensor down with something that will keep it pressed down. You could use a molded gum
+wrapper. The lid sensor is at the top right of console, it is the circle button that is pressed down by the 
+top of the CD drive lid). The real psx game will spin for a few seconds and then stop spinning.</li>
+<li>Swap the real authentic PS1 game for a burned CD-R and exit the CD player. The burned CD-R will start spinning and
+boot.</li>
+</ol>
+<h2 id="demoswap-requirements">DemoSwap Requirements</h2>
+<ul>
+<li>PS1 Console (NTSC/U or PAL).</li>
+<li>An authentic supported demo disc (must match your console region).</li>
+<li>2 high quality blank CD-Rs (one for the patched demo disc, one for your backup or 
+<a href="https://alex-free.github.io/ps1demoswap/MCTOOL_v10a.zip">MCTOOL</a>.</li>
+<li>Rip of a supported demo disc.</li>
+<li>CD burner that can burn at a slow speed (8x or slower recommended).</li>
+</ul>
+<h2 id="demoswap-patch-instructions">DemoSwap Patch Instructions</h2>
+<ol>
+<li>Check the DiscLib.txt for the title of the demo disc you have or will obtain. As of this writing all
+Interactive CD Sampler volumes 1 through 11 are supported. More demos can be added, details below.</li>
+<li>Create a raw ISO image of your demo disc using a tool like ISOBuster.</li>
+<li>On Windows you can:</li>
+<li>Drag and drop the &#39;track 01.bin&#39; file into the &#39;PS1 DemoSwap Patcher.exe&#39;, then select the DemoSwap
+patch mode.</li>
+<li>Start &#39;PS1 DemoSwap Patcher.exe&#39;. Select the DemoSwap patch mode and then select the
+&#39;track 01.bin&#39; file in the GUI.</li>
+<li>Run &#39;PS1 DemoSwap Patcher.exe&#39; from &#39;cmd.exe&#39; as a CLI program. Sample: 
+&#39;&quot;PS1 DemoSwap Patcher.exe&quot; -d track01.bin&#39;.</li>
+</ol>
+<p>On other operating systems you can only use PS1 DemoSwap Patcher as a CLI. Sample:
+&#39;ps1demoswap -d track01.bin&#39;</p>
+<ol>
+<li>The program will report if patching succeeded or not.</li>
+<li>Burn the patched disc to a CD-R. You can ignore any ECC/EDC, L-EC, etc. errors reported during
+disc verification. Error correction fields are auto corrected by your burner.</li>
+<li>Put the original demo disc in your PS1. Using your method of choice you must hold down the lid
+switch so the console will read discs with the lid open. A wooden toothpick can work.</li>
+<li>Power on the system and consult the &#39;Per Disc Instruction&#39; section.</li>
+</ol>
+<h2 id="per-disc-instruction">Per Disc Instruction</h2>
+<ul>
+<li><p>All Discs Note - When you remove the original disc you do not need to rush to replace it with the CD-R. I found on my SCPH-7501 when removing the disc the motor and laser will try to read the disc you have removed for a few seconds before giving up. After that you can easily place the CD-R into the console. When you take your next action the CD-R should begin spinning and reading. However if you removed the disc at a time when data was being read the system may lock up. Read the notes below to know when you should be removing the original disc and swapping in the CD-R.</p>
+</li>
+<li><p>Vol 1 - Select &#39;Loaded&#39; demo. While on the screen with Start and Help, swap discs, then start the demo.</p>
+</li>
+<li><p>Vol 2 - Load Demo &#39;Need For Speed&#39;. On &#39;game mode&#39; menu swap discs. Press Select to exit to main menu.
+Load NBA Shoot Out demo.</p>
+</li>
+<li><p>Vol 3 &amp; 3.5 - Load Crash Bandicoot demo. When you control Crash, swap discs. Then Press Select to
+return to main menu. Load 2Xtreme demo.</p>
+</li>
+<li><p>Vol 4 - Start Croc demo. Once controlling Croc swap discs. Press Select to exit. Start Parappa demo.</p>
+</li>
+<li><p>Vol 5 - Start Crash 2 demo. Once you control Crash, swap discs. Press select to return to menu. Start Parappa demo.</p>
+</li>
+<li>Vol 6 - Start Crash 2 demo. Once you control Crash, swap discs. Press select to return to menu. Start Bloody Roar.</li>
+<li>Vol 7 - Select Blasto demo. On instruction screen swap discs, then start demo.</li>
+<li>Vol 8 - Select Spyro demo. On instruction screen swap discs, then start demo.</li>
+<li>Vol 9 - Select Crash 3 demo. On instruction screen swap discs, then start demo.</li>
+<li>Vol 10 - Select Contender demo. On instruction screen swap discs, then start demo.</li>
+<li>Vol 11 - Select Ape Escape demo. On instruction screen swap discs, then start demo.</li>
+<li>PSOne Wherever, Whenever, Forever - Select Atlantis demo. On instruction screen swap discs, then start demo.</li>
+</ul>
+<h2 id="adding-more-demo-discs">Adding more Demo Discs</h2>
+<p>You can add your own demo disc to DiscLib.txt if your demo is not supported. The format of DiscLib is simple. The first line is a Title of the disc. Recommended you use the name in the Redump set. The second line is the Executable file loaded by SYSTEM.CNF. This is needed to identify each disc. The third line is the name of the demo executable to replace with TonyHax. I usually choose the first demo selected on the disc but you can choose any you wish. The DiscLib.txt should end with three lines of three dots. So add your discs before the ... or just add your discs at the top of the file. </p>
+<p>Make an ISO image of your demo disc that is not supported. Open the SYSTEM.CNF file and find the boot executable. Then find the demo executable you want to replace. Add this information to DiscLib.txt. ISOBuster can help you find all of this information. </p>
+<p>When to swap the discs depends on the menu of the disc. Some demos have menus that stream data off the disc for full motion video and swapping the discs could result in a freeze or crash if you don&#39;t swap fast enough. My instructions above for the 11 volumes of Interactive CD Sampler avoid these issues. The swap methods given allow for relaxed timing. Using Vol 5 as an example, while the Crash demo is running and you can control the character you should be able to carefully grab the disc by the edge and center stopping it. Remove it in a short peroid of time so you don&#39;t hurt the motor. After you remove it you should be able to wait for the motor to stop trying to spin and then put your CD-R in. Then you can press Select to exit the demo which will cause the CD to spin up again and load the main menu. Then you can start the demo that was replaced with TonyHax.</p>
+
+</html>
