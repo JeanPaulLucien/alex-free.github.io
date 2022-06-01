@@ -7,7 +7,7 @@
 <body style="background-color:black; color:white;" link="#58D3F7" alink="#FF00FF" vlink="#58D3F7">
 
 <center><h1><a href=https://alex-free.github.io>alex-free.github.io</a></h1><p><a href="http://www.psxdev.net/forum/memberlist.php?mode=viewprofile&amp;u=867">MottZilla</a> and <a href="http://www.psxdev.net/forum/memberlist.php?mode=viewprofile&amp;u=6018">Alex Free</a> proudly present:</p></center>
-<h1>PS1 DemoSwap Patcher : Perfect CD-R Backup Loading On All Retail PSX Consoles</h1>
+<h1>PS1 DemoSwap Patcher : Perfect CD-R Backup Loading On All Retail PSX Consoles + Japanese PSX Softmod</h1>
 
 <p>This tool offers 2 different patches that can be applied to a rip of a PSX game to make it first boot a special <a href=https://github.com/socram8888/tonyhax>Tonyhax</a> loader. With this special Tonyhax you get working CD audio and correct TOC data on all consoles, even Japanese ones. This means PS1 DemoSwap Patcher provides <b>the first methods ever enabling all stock unmodified SCPH-1000 and SCPH-3000 consoles to play backups with correct CD audio</b>. On USA/PAL consoles you even gain the ability to swap to the next (burned backup) disc in games that span multiple discs without having to do another swap trick for games like Parasite Eve.</p>
 
@@ -38,6 +38,22 @@
 </ul>
 
 <a name=downloads><h2>Downloads</h2></a>
+
+<h3>Version 1.0.3 (6/1/2022)</h3>
+
+<ul>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.3_win_x86.zip">Windows x86</a></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.3_mac_os_x.zip">Mac OS X</a> <em>For PowerPC, 32-bit Intel, and 64-bit Intel Macs running Mac OS X 10.3.9 and up.</em></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.3_linux_x86_static.zip">Linux x86</a> <em>For modern 32-bit Linux distros (static build).</em></li>
+<li><a href="https://alex-free.github.io/ps1demoswap/ps1_demoswap_patcher_1.0.3_linux_x86_64_static.zip">Linux x86_64</a> <em>For modern 64-bit Linux distros (static build).</em></li>
+</ul>
+
+<p>New in version 1.0.3:</p>
+<ul>
+<li>Fixed Japanese VC3 console laser calibration, now works correctly on consoles such as SCPH-7500.</li>
+<li>When using the DemoSwap Patch or a FreePSXBoot memory card, blocking the lid sensor is automatically detected with no user input required.</li>
+<li>All japanese consoles now work the same way in the Tonyhax loader. CDDA audio/multi track games are automatically detected on SCPH-1000/SCPH-3000 in the new SetSession fix.</li>
+</ul>
 
 <h3>Version 1.0.2 (5/26/2022)</h3>
 
@@ -155,7 +171,7 @@ boot.</li>
 <a name=demoswaprequirements><h2>DemoSwap Requirements</h2></a>
 <ul>
 <li>ANY PS1 Console.</li>
-<li>An real supported PSX game demo disc (must match your console region).</li>
+<li>A <a href=#perdisc>real supported PSX game demo disc</a> (must match your console region).</li>
 <li>2 high quality blank CD-Rs (one for the patched PSX game demo disc, one <b>any</b> backup CD-R that you actually want to play.</li>
 <li>Rip of a supported PSX game demo disc.</li>
 <li>CD burner that can burn at a slow speed (4x recommended).</li>
@@ -204,7 +220,7 @@ switch so the console will read discs with the lid open. A wooden toothpick, a s
 <li>Power on your PSX console and consult the "Per Disc Instructions" section immedietly below.</li>
 </ul>
 
-<h3>Per Disc Instructions</h2>
+<a name=perdisc><h3>Per Disc Instructions</h2></a>
 
 <p>All Discs Note - When you remove the original disc you do not need to rush to replace it with the CD-R. I found on my SCPH-7501 when removing the disc the motor and laser will try to read the disc you have removed for a few seconds before giving up. After that you can easily place the CD-R into the console. When you take your next action the CD-R should begin spinning and reading. However if you removed the disc at a time when data was being read the system may lock up. Read the notes below to know when you should be removing the original disc and swapping in the CD-R.</p>
 <li>Vol 1 - Select "Loaded" demo. While on the screen with Start and Help, swap discs, then start the demo.</li>
@@ -227,40 +243,29 @@ return to main menu. Load 2Xtreme demo.</li>
 
 <p>Once Tonyhax is loaded via the DemoSwap method, the patched PSX game demo disc backup CD-R will stop.</p>
 
-<h3>Early Japanese Console Instructions (SCPH-1000/SCPH-3000)</h3>
+<h3>Japanese Console Instructions</h3>
 
-<p>On VC0 and VC1(a) Japanese consoles (which are the earliest Japanese Playstation consoles manufactured) the following messages will be displayed after the the patched PSX game demo disc backup CD-R stops spinning:</p>
+<p>Once the special Tonyhax boots, the following message will be displayed after the the patched PSX game demo disc backup CD-R stops spinning:</p>
 
 <pre><code>
-Put in a backup disc, then:
-Press X if the backup has CD audio
-Press O if the backup does not have CD audio
+Put in a backup/import disc, then press X
 </code></pre>
 
-<p>Press either the X or O button on your PSX controller. If you press X, you will see the following messages:</p>
+<p>Once you press X, on most Japanese consoles you will see the following message:</p>
 
 <pre><code>
 Sending SetSession
-Please wait
 </code></pre>
 
-<p><b>These early Japanese PSX consoles take MUCH longer to boot backups with CD Audio in comparison to all other PSX consoles. This is due to a bug in these CDROM BIOS firmwares that the special Tonyhax has to work around. The more audio tracks in a backup CD-R, the longer it will take for the game to boot. You can expect this step to take possibly multiple minutes to complete. The console or program is not stuck, please be patient while booting completes</b>.</p>
+<p>If you instead see:</p>
+
+<pre><code>
+Sending SetSession fix
+Please wait, this may take a few minutes
+</code></pre>
+<p>You have a very early Japanese PSX console (SCPH-1000/3000). <b>These early Japanese PSX consoles take MUCH longer to boot backups with CD Audio in comparison to all other PSX consoles. This is due to a bug in these CDROM BIOS firmwares that the special Tonyhax has to work around. The more audio tracks in a backup CD-R, the longer it will take for the game to boot. You can expect this step to take possibly multiple minutes to complete. The console or program is not stuck, please be patient while booting completes as this waiting is unavoidable.</b></p>
 
 <p>Finally, you will breifly see the message <code>Starting</code>. The screen will go black, and then your backup CD-R will boot with perfect CD audio!</p>
-
-<h3>Later Japanese Console Instructions</h3>
-
-<p>On all other VC1(b) and newer Japanese consoles, the following message will be displayed instead of the above:</p>
-<p><code>Put in a backup disc, then press X</code></p>
-
-<p>Press the X button on your PSX controller. Next you'll see the following messages:</p>
-
-<pre><code>
-Sending SetSession
-Starting
-</code></pre>
-
-<p>The screen will go black, and then your backup CD-R will boot with perfect CD audio!</p>
 
 <h3>USA/PAL Console Instructions</h3>
 
@@ -284,7 +289,7 @@ Starting
 <p>Console models and the BIOS versions they contain are listed below:</p>
 
 <ul>
-<li>SCPH-1000 (rev a) - BIOS-1.0-1994-09-22-I</li>
+<li>SCPH-1000 (rev a/early rev b) - BIOS-1.0-1994-09-22-I</li>
 <li>SCPH-1000 (rev b) - BIOS-1.1-1995-01-22-I</li>
 <li>SCPH-1001 (rev a) - BIOS-2.0-1995-05-07-A</li>
 <li>SCPH-1001 (rev b) - BIOS-2.1-1995-07-17-A</li>
@@ -342,53 +347,43 @@ Starting
 
 <p><b>Note: If you are using a Japanese console, at least one real NTSC-J PSX game disc is required. No real PSX game disc is required for USA/PAL consoles.</b></p>
 
-<h3>Early Japanese Console Instructions (SCPH-1000/SCPH-3000)</h3>
+<h3>Japanese Console Instructions</h3>
 
-<p>On VC0 Japanese consoles (which are the earliest Japanese Playstation consoles manufactured) the first message that will be displayed once the special Tonyhax starts is:</p>
+<p>Once the special Tonyhax boots, the following message will be displayed:</p>
 
-<p><code>Remove the exploited memory card</code></p>
+<pre><code>Put in a real NTSC-J PSX game disc, then block the lid sensor</code></pre>
 
-<p><b>This is because of a bug only on VC0 consoles in the FreePSXBoot exploit that will refuse to boot backup CD-Rs unless you unplug the exploited memory card from slot 2.</b> This bug is only in the VC0 Playstation consoles, so you do not need to remove the memory card from slot 2 on all other newer consoles. This bug also happens on VC0 consoles if you are booting a backup CD-R using an entirely different method (like the audio menu swap trick) but have an exploited memory card plugged into slot 2 (even though your not booting the special TonyHAX off of the memory card using the FreePSXBoot exploit). It appears that games that do not access the memory cards at all are not affected by the bug on VC0 consoles, but to ensure successful booting take out the memory card here if you see this message (which means you have a VC0 console).</p>
+<p>If you instead see the following messages:</p>
 
-<p>On all Japanese consoles, you will see the following messages:</p>
+<pre><code>
+Remove the exploited memory card
+Put in a real NTSC-J PSX game disc, then block the lid sensor
+</code></pre>
 
-<pre><code>Put in a real NTSC-J PSX game disc
-Block the lid sensor, then press X</code></pre>
+<p>You have a very early Japanese console (VC0) that requires you to remove the exploited memory card before continuing to boot the game. If you do not do this, the game will most likely not boot and or the Tonyhax loader may freeze when begining to load the game.</p>
 
-<p>Press X on your PSX controller after the lid sensor is blocked.</p>
+<p>After you block the lid sensor, your game will spin up and then stop. Next, you will see this message:</p>
 
-<p>On VC0 and VC1(a) Japanese consoles (which are the earliest Japanese Playstation consoles manufactured), after pressing X the following messages will be displayed:</p>
+<pre><code>
+Put in a backup/import disc, then press X
+</code></pre>
 
-<pre><code>Put in a backup disc, then:
-Press X if the backup has CD audio
-Press O if the backup does not have CD audio</code></pre>
+<p>Once you press X, on most Japanese consoles you will see the following message:</p>
 
-<p>Swap the real NTSC-J PSX game with the backup CD-R you want to play. Then press either the X or O button on your PSX controller. If you press X, you will see the following messages:</p>
+<pre><code>
+Sending SetSession
+</code></pre>
 
-<pre><code>Sending SetSession
-Please wait</code></pre>
+<p>If you instead see:</p>
 
-<p><b>These early Japanese PSX consoles take MUCH longer to boot backups with CD Audio in comparison to all other PSX consoles. This is due to a bug in these CDROM BIOS firmwares that the special Tonyhax has to work around. The more audio tracks in a backup CD-R, the longer it will take for the game to boot. You can expect this step to take possibly multiple minutes to complete. The console or program is not stuck, please be patient while booting completes</b>.</p>
+<pre><code>
+Sending SetSession fix
+Please wait, this may take a few minutes
+</code></pre>
+<p>You have a very early Japanese PSX console (SCPH-1000/3000/VC0/VC1(a)). <b>These early Japanese PSX consoles take MUCH longer to boot backups with CD Audio in comparison to all other PSX consoles. This is due to a bug in these CDROM BIOS firmwares that the special Tonyhax has to work around. The more audio tracks in a backup CD-R, the longer it will take for the game to boot. You can expect this step to take possibly multiple minutes to complete. The console or program is not stuck, please be patient while booting completes as this waiting is unavoidable.</b></p>
 
 <p>Finally, you will breifly see the message <code>Starting</code>. The screen will go black, and then your backup CD-R will boot with perfect CD audio!</p>
 
-<h3>Later Japanese Console Instructions</h3>
-
-<p>On all other VC1(b) and newer Japanese consoles, the following message will be displayed instead of the above:</p>
-
-<pre><code>Put in a real NTSC-J PSX game disc
-Block the lid sensor, then press X</code></pre>
-
-<p>Press X on your PSX controller after the lid sensor is blocked. The real NTSC-J PSX game disc will spin up and then stop. Then the following messages will be displayed:</p>
-
-<p><code>Put in a a backup disc, then press X</code></p>
-
-<p>Swap the real NTSC-J PSX game with the backup CD-R you want to play. Then press the X button on your PSX controller. If you press X, you will see the following messages:</p>
-
-<pre><code>Sending SetSession
-Starting</code></pre>
-
-<p>The screen will go black, and then your backup CD-R will boot with perfect CD audio!</p>
 
 <h3>USA/PAL Console Instructions</h3>
 
@@ -408,6 +403,10 @@ Starting</code></pre>
 
 <ul><li><a href=https://www.imgburn.com>IMGBurn</a> (Windows).</li>
 <li><a href=http://cdrdao.sourceforge.net>CDRDAO</a> (Mac OS X/Linux/*BSD/Windows).</li></ul>
+
+<p>If you use cdrdao, you must use the <code>--swap</code> argument for discs with CDDA audio. Example:</p>
+
+<pre><code>cdrdao write --speed 1 --swap --eject yourgame.cue</code></pre>
 
 <a name=credits><h2>Credits</h2></a>
 
