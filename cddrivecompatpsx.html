@@ -1,0 +1,72 @@
+<h2>Background Info</h2>
+
+<p>The first part of this guide explains the hardware differences found in various PlayStation console models, to familiarize yourself with the hardware we will be working with.</p>
+
+<h3>CD Drive Servo Improvements</h3>
+
+<p>It is often said that the earliest PS1 models (mostly referring to anything older then a SCPH-5000) are worse at reading discs, and that the "best" model at reading discs is the last models made, the slim PSone SCPH-100, SCPH-101, and SCPH-102. <b>This is false.</b> While the overall technology did indeed improve in subsequent models of the console, the earliest PS1 models read discs wonderfully when brand new. So why is this constantly stated online?<p>
+
+<ul>
+    <li>It is true that the earliest SCPH-1000/SCPH-3000/SCPH-3500/SCPH-1001/SCPH-1002 models are <b>much more intolerant of sub optimal CD Drive performance and poor quality CD-R media</b> then the later models. However often this can be addressed by proper CD Drive maintenance.</li>
+
+    <li>The SCPH-1000, SCPH-1001, SCPH-1002, SCPH-3000, and SCPH-3500 models are all using "dumber" CD Drive technology in regards to using manual Bias and Gain values set by calibration screws on the motherboards of these early consoles. The SCPH-5000 and newer have auto Bias and Gain calibration done by the CD Drive itself when detecting a new disc. By setting the right manual Bias and Gain values on an early PS1 console, you can get just as good if not better performance in some cases then what the SCPH-5000 and later PS1 consoles can do by auto-adjustment.</li>
+
+    <li>The very first CD Drive model found in SCPH-1000/early SCPH-3000/early SCPH-1001/early SCPH-1002 consoles is the <code>KSM-440AAM</code>. The optical pickup sled guide rail of this CD Drive model is made entirely of <a href=https://psxdatacenter.com/PSX%20One%20Console.html>thermoplastic</a> in this CD drive model, and can eventually develop uneven <a href=https://miked50.tripod.com/repair.htm>wear</a> due to extreme heat from the PSU which is directly left of the CD Drive in the early console design as well as just general use since it is just plain old ABS plastic AFAIK. It's a perfect storm which gave this CD Drive model a very bad rep that to this day it can't shake off. Since all newer CD Drive models from the KSM-440ACM and up replaced part of the sled guide rail with <a href=https://psxdatacenter.com/PSX%20One%20Console.html>die-cast metal and hard nylon inserts</a> to prevent this specific problem, they are often <b>incorrectly</b></a> the go to answer from most people to fix an early model PS1  <b>I have revived 440AAM CD Drives with maintenance alone, this issue is not as widespread as you would think and is most likely actually rare</b> to be the actual issue with <code>KSM-440AAM</code> CD drives in particular.
+    </li>
+
+    <li>The last PSone models made in 2006 before Sony discontinued the console have much fresher lubrication, most likely less wear, and also feature the best CD Drive technology in both the CD Drive (KSM-440BAM) and the CDROM Controller chips found on these consoles. It is much more likely that a random PSone that has never been refurbished will work better as-is then say a SCPH-1000 that has also never been worked on before simply because it is much older and most likely not properly lubricated and working to spec at this point in it's life.</li>
+</ul>
+
+<h3>CD Drive Models & Compatibility</h3>
+
+<p>There were many different CD Drive models released by Sony during the lifetime of the PS1 console. All CD Drives are compatible between every console model and revision on a hardware level. For example, you can put a <code>KSM-440BAM</code> CD Drive from a SCPH-101 'donor' console into say a SCPH-1000 and it will work with some small modifications (laser assembly top case swap and Bias/Gain tweaking is required when replacing CD Drives in all PS1 consoles before the SCPH-5000). You could also technically do the reverse and put a KSM-440AAM CD Drive from a SCPH-1000 into a SCPH-100 and it would work in a plug and play manner (all consoles from the SCPH-5000 and newer do not require any modifications when replacing a CD Drive with a different one).</p>
+
+<p>A full compatibility table is below based off of info by <a href=http://www.psxdev.net/forum/viewtopic.php?t=3503>Shadow</a> of <a href=http://psxdev.net>PSXDEV.NET</a>. This has been confirmed by myself for every model of PlayStation I have come across so far.</p>
+
+<table BORDER=10 BORDERCOLOR=BLUE>
+  
+  <tr>
+    <th>CD Drive Model</th>
+    <th>What Motherboards Shipped with Them?</th>
+    <th>Requires Laser Ribbon Extension Cable?</th>
+    <th>Do Any Console Models Require Modification To Use Them?</th>
+  </tr>
+  
+  <tr>
+    <td>KSM-440AAM</td>
+    <td>PU-7 and Early PU-8</td>
+    <td>If installing on a console with a PU-18, PU-20, or PU-22 motherboard.</td>
+    <td>No modifications required, plug and play.</td>
+  </tr>
+
+  <tr>
+    <td>KSM-440ACM</td>
+    <td>Late PU-8</td>
+    <td>If installing on a console with a PU-18, PU-20, or PU-22 motherboard.</td>
+    <td>No modifications required, plug and play.</td>
+  </tr>
+
+  <tr>
+    <td>KSM-440ADM</td>
+    <td>PU-18 and Early PU-20</td>
+    <td>If installing on a console with a PU-7, PU-8, or PSone motherboard the laser assembly top case must be swapped with an original <code>KSM-440AAM</code> or <code>KSM-440ACM</code> laser assembly top case.</td>
+    <td>If installing on a console with a PU-7 or PU-8 motherboard the laser assembly top case must be <a href=#cdtcswap>swapped</a> with an original <code>KSM-440AAM</code> or <code>KSM-440ACM</code> laser assembly top case.</td>
+  </tr>
+
+  <tr>
+    <td>KSM-440AEM</td>
+    <td>Late PU-20 and PU-22</td>
+    <td>If installing on a console with a PU-7, PU-8, or PSone motherboard.</td>
+    <td>If installing on a console with a PU-7 or PU-8 motherboard the laser assembly top case must be <a href=#cdtcswap>swapped</a> with an original <code>KSM-440AAM</code> or <code>KSM-440ACM</code> laser assembly top case.</td>
+  </tr>
+
+  <tr>
+    <td>KSM-440BAM</td>
+    <td>PSone (SCPH-100, SCPH-101, SCPH-102)</td>
+    <td>If installing on a console with a PU-18, PU-20, or PU-22 motherboard.</td>
+    <td>If installing on a console with a PU-7 or PU-8 motherboard the laser assembly top case must be swapped with an original <code>KSM-440AAM</code> or <code>KSM-440ACM</code> laser assembly top case.</td>
+</table>
+
+<h2>Repetitive Operations</h2>
+
+<p>These tasks should be well understood before continuing in the guide as they will have to be performed a few times through out it.</p>

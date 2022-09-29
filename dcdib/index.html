@@ -1,181 +1,170 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>DCDIB</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>dcdib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body style="background-color:black; color:white;" link="#58D3F7" alink="#FF00FF" vlink="#58D3F7">
 
-<center><h1><a href=https://alex-free.github.io>alex-free.github.io</a></h1></center>
+<h1><a href=https://alex-free.github.io>alex-free.github.io</a></h1>
 
-<h1>Dreamcast CDI Burner</h1> 
+<h1>Dreamcast CDI Burner (DCDIB) : Burn ALL Sega Dreamcast .CDI Files On Linux With Open Source Software</h1>
+
 <p>by Alex Free</p>
 
-<p>Dreamcast CDI Burner is a collection of software (CDIrip and CDRtools, along with my own cdib bash script) that can burn a Dreamcast CDI file to a blank CD-ROM using your computer's CD burner. The resulting CD-ROM is bootable on a Sega Dreamcast console, making use of the MIL-CD exploit. This exploit does not require any console modifications, as long as it is exploitable. CDI is the proprietary format of the Windows only software DiscJuggler. It is a very popular format for Sega Dreamcast software distribution.</p>
+<p>CDI is the proprietary format of the Windows only software DiscJuggler. CDI is a very popular format for Sega Dreamcast software distribution. <b>DCDIB is an open source toolkit for burning Sega Dreamcast <code>.cdi</code> files (used for self-booting homebrew programs and backups) to CD-R discs on the Linux computers</b>. The CD-Rs you burn with DCDIB will <i>just work</i> and boot like authentic Sega Dreamcast GD-ROM discs on revision 0 and revision 1 Sega Dreamcast consoles. <b>Revision 2 Sega Dreamcast consoles may or may not work with self-booting CD-Rs</b> due to the MIL-CD exploit being removed from the BIOS chip found on at least some revision 2 consoles. To find out what revision your Sega Dreamcast console is, flip the entire console upside-down and look for the number 0, 1, or 2 in a circle on the model sticker as displayed below:</p>
 
-<p>Revision 0 and 1 consoles can all be exploited. If you have a revision 2 console it may not be able to use the MIL-CD exploit to boot burned CD-ROMs. To find out the revision of a console, flip it upside down and look for the number 0, 1, or 2 circled on the bottom label.</p>
+<p><img src="images/dreamcast-rev-1.jpg" alt="dreamcast rev 1 console" height="500"></p>
 
-<p>Dreamcast CDI Burner supports all 4 Sega Dreamcast CDI File format types.</p>
-<ul><li>Data ISO+data ISO</li>
-<li>WAV+data ISO</li>
-<li>Multiple CDDA WAVs+data ISO</li>
-<li>Multiple CDDA WAVs in an ISO+data ISO</li></ul>
+<p>DCDIB supports burning <b>all 4 Sega Dreamcast CDI file format types</b>:</p>
 
-<p><a href=https://github.com/alex-free/dreamcast-cdi-burner>GitHub</a> || <a href=https://alex-free.github.io/dcdib>HomePage</a> || <a href=https://macintoshgarden.org/apps/dreamcast-cdi-burner-mac-os-x>Macintosh Garden</a></p>
+<ul>
+    <li>Data ISO (Session 1) + Data ISO (Session 2)</li>
+    <li>WAV/audio track (Session 1) + Data ISO (Session 2)</li>
+    <li>Multiple CDDA WAVs/audio tracks (Session 1) + Data ISO (Session 2)</li>
+    <li>Multiple CDDA WAVs/audio tracks in an ISO (Session 1) + Data ISO (Session 2)</li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+    <li><a href=https://github.com/alex-free/dreamcast-cdi-burner>GitHub</a></li>
+    <li><a href=https://alex-free.github.io/dcdib>Homepage</a></li>
+    <li><a href=https://www.dreamcast-talk.com/forum/viewtopic.php?f=2&t=13974>Dreamcast-Talk Thread</a></li>
+</ul>
 
 <h2>Table Of Contents</h2>
-<ul><li><a href="#downloads">Downloads</a></li>
-<li><a href="#install">Installation</a></li>
-<li><a href="#install_source">Install From Source</a></li>
-<li><a href="#uninstall">How To Uninstall</a></li>
-<li><a href="#optical_drive_note">Important Info For Systems With Multiple CD Burners</a></li>
-<li><a href="#cdr_note">Important Info About CD-ROMs</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#images">Example Burns (Images)</a></li>
-<li><a href="#changelog">Changlog</a></li>
-<li><a href="#bundled_software">Bundled Software & Licensing</a></ul>
+<ul>
+    <li><a href=#downloads>Downloads</a></li>
+    <li><a href=#cdrmedia>CD-R Media & The Sega Dreamcast</a></li>
+    <li><a href=#usage>Usage</a></li>
+    <li><a href=#source>Installing From Source</a></li>
+    <li><a href=#bundled>Bundled Software & Licensing</a></li>
+</ul>
 
-<a name=downloads><h2>Downloads</h2></a>
-<h3>Version 1.0.7 - (8/19/2021) - <a href="#changelog">Changes In This Version</a></h3>
-<p><a href=https://github.com/alex-free/dreamcast-cdi-burner/releases/download/1.0.7/dreamcast_cdi_burner_1.0.7_mac_powerpc.zip>Mac OS X 10.3.9-10.6.x (PowerPC)</a></p>
-<p><a href=https://github.com/alex-free/dreamcast-cdi-burner/releases/download/1.0.7/dreamcast_cdi_burner_1.0.7_mac_i386.zip>Mac OS X 10.6.x-10.14.x (Intel)</a></p>
-<p><a href=https://github.com/alex-free/dreamcast-cdi-burner/archive/1.0.7.zip>Source Code</a></p>
-<p>View <a href=https://github.com/alex-free/dreamcast-cdi-burner/releases/>all releases</a>.</p>
+<h2>Downloads</h2>
 
-<a name=install><h2>Installation</h2></a>
+<h3>v1.0.8 (9/28/2022)</h3>
 
-<h3>Mac OS X</h3>
+<ul>
+    <li><a href=https://github.com/alex-free/dreamcast-cdi-burner/releases/download/v1.0.8/dcdib-1.0.8-x86_64.zip>DCDIB v1.0.8</a> <i>For modern x86_64 Linux distributions</i>.</li>
+</ul>
 
-<p>Download the PowerPC or Intel release, and unzip it. Copy the <code>DCDIB.app</code> to <code>/Applications/DCDIB.app</code>. If <code>DCDIB.app</code> is ran anywhere else or named differently you will be prompted to copy it to <code>/Applications/DCDIB.app</code> before you can continue.</p>
+<p>Changes:</p>
 
-<h3>Linux</h3>
-<p>A pre-built release is not available. Install Dreamcast CDI Burner from <a href="#install_source">source</a>.</p>
+<ul>
+    <li>Portable/self-contained Linux releases are now generated by the source tree (using <a href=https://alex-free.github.io/pled>PLED</a>) that work on modern x86_64 Linux distributions.</li>
+    <li>Added an optional second argument that can be passed to DCDIB to allow a user specified CD burner device devname.</li>
+    <li>Added default CD burner device devname for cdrecord to the <code>dcdib</code> script (thanks <a href=https://github.com/tomodachi>Tomodachi</a>).</li>
+    <li>Added <a href=https://github.com/Distrotech/cdrtools>CDRTools</a> and <a href=https://github.com/jozip/cdirip>CDIRip</a> as proper submodules in source tree.</li>
+    <li>Completely rewrote the new <code>build</code> script for compiling portable Linux releases.</li>
+    <li>Added sanity checks to the <code>dcdib</code> script (thanks <a href=https://github.com/hackerb9>hackerb9</a>).</li>
+    <li>Dropped Mac OS/Mac OS X/*BSD support.</li>
+</ul>
 
-<a name=install_source><h2>Install From Source</h2></a>
+<a name=cdrmedia><h2>CD-R Media & The Sega Dreamcast</h2></a>
 
-<h3>Mac OS X Requirements</h3>
+<p>Only use high-quality CD-R media. If you want good results burning backups for your Sega Dreamcast your CD-R media should contain:</p>
 
-<p>Mac OS X 10.3.9 or newer is required to build for Mac OS X. PowerPC and Intel are supported. To target Mac OS X 10.3.9-10.6.8 PowerPC build on Mac OS X 10.3.9. To target Mac OS X 10.4-10.14 Intel, build on Mac OS X 10.4. Xcode and or Xcode Command Line Tools (depending on your OS version) is required.</p>
+<ul><li>High quality dye (SuperAZO, AZO, or Phthalocyanine).</li>
+  <li>A highly reflective layer system.</li>
+  <li>High quality polycarbonate and "sealing" process combining all parts of the CD-R.</li>
+</ul>
 
-<h3>Linux Requirements</h3>
+<p>I have found Verbatim DataLifePlus CD-Rs to be really good with Sega Dreamcast consoles. For reference, below is the ATIP information displayed by <code>cdrecord -atip</code> for a Verbatim DataLifePlus CD-R:</p>
 
-<p>Compiling for Linux requires gcc and GNUmake installed.</p>
+<pre><code>ATIP info from disk:
+  Indicated writing power: 4
+Disk Is not unrestricted
+Disk Is not erasable
+  Disk sub type: Medium Type A, high Beta category (A+) (3)
+  ATIP start of lead in:  -11077 (97:34/23)
+  ATIP start of lead out: 359848 (79:59/73)
+Disk type:    Long strategy type (Cyanine, AZO or similar)
+Manuf. index: 11
+Manufacturer: Mitsubishi Chemical Corporation</code></pre>
 
-<h3>Building</h3>
+<p>Verbatim UltraLife Archival Grade Gold CD-Rs also are really good, although they are more expensive then Verbatim DataLifePlus. I think Verbatim DataLifePlus CD-Rs are slightly better with the Sega Dreamcast anyways, but they remain an excellent option. For reference, below is the ATIP information displayed by <code>cdrecord -atip</code> for a Verbatim UltraLifePlus CD-R:</p>
 
-<p>Compiling Dreamcast CDI Burner is done by executing one command found in the <a href="https://github.com/alex-free/dreamcast-cdi-burner/archive/1.0.6.zip">source code</a> download, the <code>build-all</code> script with sudo privilages or as root. The <code>build-all</code> script does not need to be executed from the same directory to work. It will compile and install Dreamcast CDI Burner, as well as create a release in the <code>build</code> directory.</p>
+<pre><code>ATIP info from disk:
+  Indicated writing power: 5
+Disk Is not unrestricted
+Disk Is not erasable
+  Disk sub type: Medium Type B, low Beta category (B-) (4)
+  ATIP start of lead in:  -12520 (97:15/05)
+  ATIP start of lead out: 359849 (79:59/74)
+Disk type:    Short strategy type (Phthalocyanine or similar)
+Manuf. index: 26
+Manufacturer: TDK Corporation</code></pre>
 
-<a name=cdr_note><h2>Important Info About CD-ROMs</h2></a>
-<p>Some people swear by <a href=https://www.verbatim.com/home?con=696>Verbatim</a> CD-ROMs, however this has not been my experience. I've been able to grab any CD-ROM brand (such as Maxell) and they work perfectly on my Model 1 Sega Dreamcast.</p>
+<p>Do not use cheap/poor quality CD-R media</b>, which is almost always all that is available in retail stores and most likely any CD-R that is not "archival grade". <i>Poor quality cheap CD-R media can sometimes result in:</i></p>
 
-<p>Also, I'd just like to say here that playing burned games and software is <i>no different then playing burned audio CDs in your Dreamcast as far as the laser is concerned</i>.</p>
+<ul><li>Slower loading times/in-game lag because of CD drive tracking errors.</li>
+<li>Issues reading data off of the disc possibly resulting in failure to boot the CD-R entirely.</li>
+<li>Skipping/silent audio and or music.</li></ul>
+
+<p>Poor quality CD-R media <i>may</i> work fine with the Sega Dreamcast and you may not experience the above issues, however in general it is still best to just always use Verbatim DataLifePlus/UltraLife CD-Rs or something of similar quality. For reference, below is the ATIP information displayed by <code>cdrecord -atip</code> for a Maxell Music CD-R</b>:</p>
+
+<pre><code>ATIP info from disk:
+  Indicated writing power: 4
+Disk Is unrestricted
+Disk Is not erasable
+  Disk sub type: Medium Type A, low Beta category (A-) (2)
+  ATIP start of lead in:  -12508 (97:15/17)
+  ATIP start of lead out: 359845 (79:59/70)
+Disk type:    Short strategy type (Phthalocyanine or similar)
+Manuf. index: 22
+Manufacturer: Ritek Co.</code></pre>
+
+<p>If you are still having issues booting even high quality CD-Rs on the Sega Dreamcast, consider wiping with a clean microfiber cloth from the inner ring to the outer edge of the CD-R in all directions and then trying to boot the disc again.</p>
 
 <a name=usage><h2>Usage</h2></a>
 
-<h3>Mac</h3>
-<p>Insert a blank CD-ROM into the internal burner of your Mac. <b>When Finder asks what to do with this disc, click <code>ignore</code></b>.</p>
+<p>DCDIB released as a portable Linux application (generated by <a href=https://alex-free.github.io/pled>PortableLinuxExecutableDirectory</a>), so <b>if you have a modern x86_64 Linux OS you can simply download and unzip the latest DCDIB release to use it</b>. If you desire to use DCDIB on a different Linux OS version and or architecture then what the current release provides support for, you may compile DCDIB from <a href=#source>source</a>. After inserting a high-quality CD-R disc in your CD-R burner, <b>ignore any prompts about the new blank CD-R</b> that your OS may display such as:</p>
 
-<p><img src="https://alex-free.github.io/dcdib/blank_cd_finder.png" alt="Ignore blank CD-ROM on Mac" height="210"></p>
+<p><img src="images/fedora-new-cd.png" alt="Fedora new CD prompt" height="200"></p>
 
-<p>Double click <code>/Applications/DCDIB.app</code>. A window will open allowing you to select a CDI file. After selecting a file you may be prompted for your account password. This is required to give CDRtools the privileges required for successful burning. After entering your password if prompted, simply wait for the burn to complete, you may monitor the progress made in the Terminal window.</p>
+<p><b>Using sudo or root, execute the <code>dcdib</code> script in the extracted release directory with 1 or 2 arguments</b>. The first argument is the filepath to the <code>.cdi</code> file you want to burn to a CD-R and it is required. The second argument is completely optional, it allows you to change the CD burner's device devname to a custom one. DCDIB already provides a default CD burner device devname to use which should work on most if not all Linux distributions (<code>/dev/sr0</code>). However if you find this to not work on your setup you can provide your own in the optional second argument to DCDIB.</p>
 
-<p><img src="https://alex-free.github.io/dcdib/dcdib_mac_finder_select_cdi.png" alt="Selecting a .CDI file in Finder on Mac" height="300"></p>
+<p><i>If your wondering why</i>, root privileges are required to ensure that buffer under-runs do not occur during burning which would result in a CD-R coaster. Root privilages also ensure that <code>cdrecord</code> can access your CD burner hardware successfully to burn the CD-R.</p>
 
-<p>Note that Dreamcast CDI Burner will eject all removable storage as a side effect of enforcing a successful burn on Mac OS X.</p>
+<p><img src="images/dcdib-usage-1.png" alt="DCDIB usage 1" height="400"></p>
 
-<h3>Linux</h3>
+<p><img src="images/dcdib-usage-2.png" alt="DCDIB usage 2" height="400"></p>
 
-<p>Insert a blank CD-ROM into the internal burner of your computer. Don't let any software/your OS format or otherwise 'touch' the CD.</p>
+<p><img src="images/dcdib-usage-3.png" alt="DCDIB usage 3" height="400"></p>
 
-<p><img src="https://alex-free.github.io/dcdib/blank_cd_fedora.png" alt="Ignore blank CD-ROM on Linux" height="300"></p>
+<a name=source><h2>Installing From Source</h2></a>
 
-<p>In the terminal execute <code>sudo cdib /path/to/your.cdi</code> (replace <code>/path/to/your.cdi</code> with your actual desired .CDI file). Then, just wait for your burn to complete.</p>
+<p>Installing from source allows you to compile your own DCDIB release for a different Linux version, distribution, and or CPU architecture (i.e. ARM, x86 32-bit, etc.).</p>
 
-<a name=images><h2>Example Burns (Images)</h2></a>
+<p>First of all, install all the pre-requisites required for building DCDIB from source:</p>
 
-<p><img src="https://alex-free.github.io/dcdib/doa2_burn_on_mac_1.png" alt="DOA2 burn on Mac image 1" height="600"></p>
+<ul>
+    <li><a href=https://www.gnu.org/software/make/>GNUmake</a></li>
+    <li><a href=https://www.gnu.org/software/gcc>GCC</a></li>
+    <li><a href=https://www.gnu.org/software/bash>Bash</a></li>
+    <li><a href=https://git-scm.com/>Git</a></li>
+</ul>
 
-<p><img src="https://alex-free.github.io/dcdib/doa2_burn_on_mac_2.png" alt="DOA2 burn on Mac image 2" height="600"></p>
+<p>Next, clone the DCDIB source tree from GitHub recursively using git: <pre><code>git clone --recursive https://github.com/alex-free/dreamcast-cdi-burner</code></pre></p>
 
-<p><img src="https://alex-free.github.io/dcdib/doa2_burn_on_mac_3.png" alt="DOA2 burn on Mac image 3" height="600"></p>
+<p>Now that the entire DCDIB source tree is recursively cloned, <code>cd</code> into the <code>dreamcast-cdi-burner</code> directory and execute the <code>./build</code> script. Then just wait a bit for your release <code>.zip</code> file to be generated by the <code>build</code> script. A release directory will also be created, allowing you to immediately use the DCDIB open source toolkit.</p>
 
-<p><img src="https://alex-free.github.io/dcdib/doa2_burn_on_mac_4.png" alt="DOA2 burn on Mac image 4" height="240"></p>
+<p>If you want to clean your DCDIB source tree of all built binaries/releases, simply execute <code>./build clean</code>. The <code>clean</code> argument will tell the <code>build</code> script to simply exit after resetting the source tree.</p>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_1.png" alt="HT burn on Linux image 1" height="600"></p>
+<a name=bundled><h2>Bundled Software & Licensing</h2></a>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_2.png" alt="HT burn on Linux image 2" height="600"></p>
+<p>DCDIB itself is released into the public domain, see the file <code>dcdib.txt</code> in the <code>licenses</code> directory of each DCDIB release.</p>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_3.png" alt="HT burn on Linux image 3" height="600"></p>
+<p>DCDIB makes use of the following programs listed below, which have their own licenses/terms:</p>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_4.png" alt="HT burn on Linux image 4" height="600"></p>
+<ul>
+    <li><a href=https://alex-free.github.io/pled>PortableLinuxExecutableDirectory</a> (Public Domain, see the file <code>licenses/pled.txt</code>)</li>
+    <li><a href=https://github.com/jozip/cdirip>CDIRip</a> (GNU GPL v2, see the file <code>licenses/cdirip.txt</code>)</li>
+    <li><a href=https://Distrotech/cdrtools>CDRRecord (from CDRTools)</a> (CDDL v1.0 AND GPL v2, see the files <code>licenses/cdrecord-cddl.txt</code> and <code>licenses/cdrecord-gpl2.txt</code>)</li>
+</ul>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_5.png" alt="HT burn on Linux image 5" height="600"></p>
+</body>
 
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_6.png" alt="HT burn on Linux image 6" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_7.png" alt="HT burn on Linux image 7" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_8.png" alt="HT burn on Linux image 8" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/ht_burn_on_linux_9.png" alt="HT burn on Linux image 9" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_1.png" alt="RECVCD1 burn on Linux image 1" height="600"></p>
-
-<img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_2.png" alt="RECVCD1 burn on Linux image 2" height="600"></p>
-
-<img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_3.png" alt="RECVCD1 burn on Linux image 3" height="600"></p>
-
-<img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_4.png" alt="RECVCD1 burn on Linux image 4" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_5.png" alt="RECVCD1 burn on Linux image 5" height="600"></p>
-
-<img src="https://alex-free.github.io/dcdib/recv_cd1_burn_on_linux_6.png" alt="RECVCD1 burn on Linux image 6" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd2_burn_on_linux_1.png" alt="RECVCD2 burn on Linux image 1" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd2_burn_on_linux_2.png" alt="RECVCD2 burn on Linux image 2" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd2_burn_on_linux_3.png" alt="RECVCD2 burn on Linux image 3" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd2_burn_on_linux_4.png" alt="RECVCD2 burn on Linux image 4" height="600"></p>
-
-<p><img src="https://alex-free.github.io/dcdib/recv_cd2_burn_on_linux_5.png" alt="RECVCD2 burn on Linux image 5" height="600"></p>
-
-<a name=changelog><h2>Changelog</h2></a>
-
-<h3>Version 1.0.7 (8/19/2021)</h3>
-
-<ul><li>Removed build select, 10.3.9 is now required to build targeting Panther PowerPC.</li>
-<li>Added Intel Mac support, and Mac OS 10.11+ compatibility by unloading diskarbitrationd and not loading it until burning is complete.</li>
-<li>Always specify IODVDServices.</ul>
-
-<h3>Version 1.0.6 (2/1/2021)</h3>
-
-<ul><li>Fixed the CDRtools compatibility regression on Mac OS X 10.3.9</li>
-<li>The <code>build-all</code> script should now work on Mac OS X 10.7 and above. (untested as I do not have an Intell Mac).</li>
-<li>The <code>build-all</code> script should now compile native Intel builds when ran on Intel Macs (untested as I do not have an Intel Mac).</li>
-<li>Switched to uname based OS detection in the cdib script.</li>
-<li>On Linux the CD-ROM will be ejected after a successful burn (the Mac OS X version already did this).</li></ul>
-
-<h3>Version 1.0.5 (1/27/2021)</h3>
-
-<ul><li>Linux support.</li>
-<li>CDIrip 0.6.3 is now used for Linux builds.</li>
-<li>Mac OS X build now uses Build Select v1.0.1 (included in source).</li>
-<li>The build script can now be executed from any directory, not just the current one.</li></ul>
-
-<a name=uninstall><h2>How To Uninstall</h2></a>
-
-<h3>On Mac OS X</h3>
-<p>Delete <code>/Applications/DCDIB.app</code>.</p>
-
-<h3>On Linux</h3>
-<p>Execute the <code>uninstall</code> script (found in each linux release, if you built from source a release was created in the <code>build</code> directory) with sudo privilages or as root. You can type <code>sudo</code> in the Terminal application, add a space, and then simply drag the <code>uninstall</code> script as well, it does not need to be executed from the same directory.</p>
-
-<a name=bundled_software><h2>Bundled Software & Licensing</h2></a>
-
-<ul><li><a href=http://cdrtools.sourceforge.net/private/cdrecord.html>CDRtools v3.02a09</a> (CDDL, BSDL 2 clause, LGPL version 2.1, GPL version 2, Public Domain)</li>
-<li>CDIrip (<a href=https://sourceforge.net/projects/cdimagetools/files/CDIRip>0.6.3</a> - GNU GPL version 2), (<a href=https://web.archive.org/web/20060213170824/http://cdirip.cjb.net>0.6.2</a> - as is, no license, source code available).</li>
-<li><a href=https://github.com/alex-free/dreamcast-cdi-burner/blob/master/cdib>Cdib</a> (my own script) along with everything else that is not the above software, but is included in the source and releases, is released into the Public Domain (unlicense).</li></ul>
-
-<p>For more information, see the 'licenses' directory in each release.</p>
+</html>
