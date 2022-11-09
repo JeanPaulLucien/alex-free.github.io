@@ -209,6 +209,7 @@
 <li><a href="https://www.psx-place.com/resources/tonyhax-international.1281/">PSX-Place Tonyhax International Resource</a></li>
 <li><a href="http://www.psxdev.net/forum/viewtopic.php?f=66&amp;t=3967">PSXDEV Thread</a></li>
 <li><a href="https://gbatemp.net/threads/tonyhax-international-backup-loader-for-all-japanese-usa-and-pal-ps1-consoles-early-ps2-consoles-gameshark-cheat-cart-flasher.615892/#post-9922514">GBATemp Thread</a></li>
+<li><a href="https://alex-free.github.io/aprip">APrip Homepage</a></li>
 <li><a href="https://alex-free.github.io/ps1demoswap">PS1 DemoSwap Patcher Homepage</a></li>
 <li><a href="https://alex-free.github.io/psexe2rom">PSEXE2ROM Homepage</a></li>
 <li><a href="https://github.com/brad-lin/FreePSXBoot">FreePSXBoot</a></li>
@@ -216,6 +217,17 @@
 <li><a href="https://orca.pet/tonyhax">Tonyhax (the original) Homepage</a></li>
 </ul>
 <h2 id="downloads">Downloads</h2>
+<h3 id="version-1.1.2-1192022">Version 1.1.2 (11/9/2022)</h3>
+<ul>
+<li><a href="https://github.com/alex-free/tonyhax/releases/download/v1.1.2i/tonyhax-v1.1.2-international.zip">tonyhax-v1.1.2-international</a></li>
+<li><a href="https://github.com/alex-free/tonyhax/archive/refs/tags/v1.1.2i.zip">source code</a></li>
+</ul>
+<p>Changes:</p>
+<ul>
+<li><p>Added support for bypassing the <a href="#playing-games-with-additonal-copy-protection-routines">additional anti-piracy copy protection routines</a> found in all versions of Yu-Gi-Oh! Forbidden Memories, Cool Boarders 2001, Disney’s The Emperor’s New Grove, Resident Evil: Survivor, and Tomba! 2.</p></li>
+<li><p>Added support for bypassing the <a href="#playing-games-with-additonal-copy-protection-routines">additional anti-piracy copy protection routines</a> found in Pocket Jiman, thanks to the code by <a href="https://gbatemp.net/members/m4x1mumrez.610331/">m4x1mumrez</a> generated with <a href="https://alex-free.github.io/aprip">APrip</a>.</p></li>
+<li><p>Fixes a regression in version 1.1.1 that could possibly cause Japanese consoles to freeze before booting the game completely.</p></li>
+</ul>
 <h3 id="version-1.1.1-10292022">Version 1.1.1 (10/29/2022)</h3>
 <ul>
 <li><a href="https://github.com/alex-free/tonyhax/releases/download/v1.1.1i/tonyhax-v1.1.1-international.zip">tonyhax-v1.1.1-international</a></li>
@@ -223,7 +235,7 @@
 </ul>
 <p>Changes:</p>
 <ul>
-<li>A completely new system to bypass <a href="#playing-games-with-additonal-copy-protection-routines">additional anti-piracy copy protection routines</a> found in some later PSX games <strong>which works on all consoles, including Japanese ones</strong> has replaced the old Socram8888 bios patch. This improves Tonyhax International by giving it the ability to play many more games then ever before, and makes support just as good on the Japanese consoles. Huge thanks to MottZilla for the method to implement gameshark codes in Tonyhax International, which provides this functionallity.</li>
+<li>A completely new system to bypass <a href="#playing-games-with-additonal-copy-protection-routines">additional anti-piracy copy protection routines</a> found in some later PSX games <strong>which works on all consoles, including Japanese ones</strong> has replaced the old Socram8888 bios patch. This improves Tonyhax International by giving it the ability to play many more games then ever before, and makes support just as good on the Japanese consoles. Huge thanks to MottZilla for the method to implement gameshark codes in Tonyhax International, which provides this functionality.</li>
 <li>Optimized Tonyhax International’s loader for size and speed. Cleaned up source tree.</li>
 <li>Rewrote documentation in markdown.</li>
 </ul>
@@ -384,7 +396,7 @@
 <h3 id="playing-games-that-span-multiple-discs-on-japanese-ps2-consoles">Playing Games That Span Multiple Discs on Japanese PS2 Consoles</h3>
 <p>There are some games which span multiple discs. And <strong>some of these games</strong> (such as Parasite Eve, Fear Effect, and Crono Cross) that span multiple discs require you to open the CD drive, remove disc 1, insert disc 2, and close the CD drive at some point in the game. <strong>Unfortunately only for Japanese PS2 consoles, you can not do this with Tonyhax International.</strong> If you get to a point in a game that requires ejecting the drive and putting in a new game, you have to play this part of the game on a different console (Any PS1 or American/European PS2 works). It is important to note however that most games that span multiple discs allow you to load a game save created on disc 1 while playing disc 2. This means you just need to save at the last point possible on disc 1, and then you can just boot disc 2 with Tonyhax International like normal and load your game save created earlier on disc 1, bypassing this limitation for certain games that allow saving right at disc swap mid-game.</p>
 <h3 id="playing-pal-region-games-on-japanese-ps2-consoles">Playing PAL Region Games On Japanese PS2 Consoles</h3>
-<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a European/PAL PS1 backup CD-R or import disc on a Japanese PS2 in PAL video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the PS1 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your Japanese PS2 console to PAL video mode for Tonyhax International:</p>
+<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a European/PAL PS1 backup CD-R or import disc on a Japanese PS2 in PAL video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the <strong>PS2 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a></strong>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your Japanese PS2 console to PAL video mode for Tonyhax International:</p>
 <ul>
 <li>Download <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">PSVModeNeg v1.0.1</a> and extract the file <code>PS1VModeNeg.elf</code>.</li>
 <li>Copy the file <code>PS1VModeNeg.elf</code> to a FAT32 formatted USB flash drive that works with your soft-modded PS2. You can soft-mod your PS2 with <a href="https://www.ps2-home.com/forum/viewtopic.php?t=5208">FreeHDBoot</a>, <a href="https://github.com/CTurt/FreeDVDBoot">FreeDVDBoot</a> or <a href="https://www.ps2-home.com/forum/viewtopic.php?t=1248">FreeMCBoot</a> to be able to use PS1VModeNEG on your PS2 console.</li>
@@ -414,7 +426,7 @@
 <h2 id="playing-games-that-span-multiple-discs-on-americaneuropean-ps1ps2-consoles">Playing Games That Span Multiple Discs On American/European PS1/PS2 Consoles</h2>
 <p>All American and European consoles do not have the same limitations as the Japanese consoles and can play games that span multiple discs like normal.</p>
 <h2 id="playing-pal-games-on-american-ps2-consoles">Playing PAL Games On American PS2 Consoles</h2>
-<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a European/PAL PS1 backup CD-R or import disc on a American PS2 in PAL video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the PS1 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your American PS2 console to PAL video mode for Tonyhax International:</p>
+<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a European/PAL PS1 backup CD-R or import disc on a American PS2 in PAL video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the <strong>PS2 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a></strong>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your American PS2 console to PAL video mode for Tonyhax International:</p>
 <ul>
 <li>Download <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">PSVModeNeg v1.0.1</a> and extract the file <code>PS1VModeNeg.elf</code>.</li>
 <li>Copy the file <code>PS1VModeNeg.elf</code> to a FAT32 formatted USB flash drive that works with your soft-modded PS2. You can soft-mod your PS2 with <a href="https://www.ps2-home.com/forum/viewtopic.php?t=5208">FreeHDBoot</a>, <a href="https://github.com/CTurt/FreeDVDBoot">FreeDVDBoot</a> or <a href="https://www.ps2-home.com/forum/viewtopic.php?t=1248">FreeMCBoot</a> to be able to use PS1VModeNEG on your PS2 console.</li>
@@ -424,7 +436,7 @@
 <li>Playing through your American PS1 game disc may look or act weird in PAL video mode, ignore this. Just get to the exploit method and start Tonyhax International. Put in a PAL region import disc or PAL region backup CD-R and the PAL PS1 game will boot in PAL video mode.</li>
 </ul>
 <h2 id="playing-japaneseamerican-games-on-pal-ps2-consoles">Playing Japanese/American Games On PAL PS2 Consoles</h2>
-<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a Japanese/American PS1 backup CD-R or import discs on a PAL PS2 in NTSC video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the PS1 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your PAL PS2 console to NTSC video mode for Tonyhax International:</p>
+<p>The early PS2 models that Tonyhax International supports have the PS1 mode which runs PS1 software hard-coded to NTSC video mode. This can cause a problem with Tonyhax International if you want to play a Japanese/American PS1 backup CD-R or import discs on a PAL PS2 in NTSC video mode. Since PS1 software can not change the video mode correctly from PS1 mode running on a PS2, you have to resort to the <strong>PS2 homebrew software known as <a href="https://www.psx-place.com/threads/ps1vmodeneg-by-sp193.25050/">PSVModeNeg</a></strong>. This software allows you to explicitly change the video mode to PAL. An older version of PSVModeNeg is required if you want to use it’s effects with Tonyhax International, specifically <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">v1.0.1</a>. This version simply inverses the current video mode of the console, rather then reading the PS1 game disc to figure out what video mode the disc itself expects. Here are the steps below to change your PAL PS2 console to NTSC video mode for Tonyhax International:</p>
 <ul>
 <li>Download <a href="https://alex-free.github.io/tonyhax-international/PS1VModeNeg-1.0.1.zip">PSVModeNeg v1.0.1</a> and extract the file <code>PS1VModeNeg.elf</code>.</li>
 <li>Copy the file <code>PS1VModeNeg.elf</code> to a FAT32 formatted USB flash drive that works with your soft-modded PS2. You can soft-mod your PS2 with <a href="https://www.ps2-home.com/forum/viewtopic.php?t=5208">FreeHDBoot</a>, <a href="https://github.com/CTurt/FreeDVDBoot">FreeDVDBoot</a> or <a href="https://www.ps2-home.com/forum/viewtopic.php?t=1248">FreeMCBoot</a> to be able to use PS1VModeNEG on your PS2 console.</li>
@@ -982,13 +994,13 @@ Disk Is not erasable
 Disk type:    Short strategy type (Phthalocyanine or similar)
 Manuf. index: 26
 Manufacturer: TDK Corporation</code></pre>
-<p>Do not use cheap/poor quality CD-R media, which is almost always all that is available in retail stores and most likely any CD-R that is not “archival grade”. Poor quality cheap CD-R media <em>can</em> result in:</p>
+<p><strong>Do not use cheap/poor quality CD-R media, which is almost always all that is available in retail stores and most likely any CD-R that is not “archival grade”</strong>. Poor quality cheap CD-R media <em>can</em> result in:</p>
 <ul>
 <li>Slower loading times/in-game lag because of CD drive tracking errors (bad noises from the CD drive).</li>
 <li>Issues reading data off of the disc possibly resulting in a game to freeze and motor power off in the CD drive.</li>
 <li>Skipping/silent audio and or music.</li>
 </ul>
-<p>Later PS1 consoles (starting at the SCPH-5000 series and newer) and all PS2 consoles have a much greater tolerance to poor quality CD-R media, and <em>may</em> work fine with it however in general it is still best to just always use Verbatim DataLifePlus/UltraLife CD-Rs or something of similar quality. Here is the ATIP information displayed by <code>cdrecord -atip</code> for a Maxell Music CD-R:</p>
+<p>Later PS1 consoles (starting at the SCPH-5000 series and newer) and all PS2 consoles have a much greater tolerance to poor quality CD-R media, and <em>may</em> work fine with it however in general it is still best to just always use Verbatim DataLifePlus/UltraLife CD-Rs or something of similar quality. Here is the ATIP information displayed by <code>cdrecord -atip</code> for a Maxell Music CD-R (which is a poor quality brand/CD-R media that is <strong>highly not recommended</strong>.</p>
 <pre><code>ATIP info from disk:
   Indicated writing power: 4
 Disk Is unrestricted
@@ -1009,8 +1021,7 @@ Manufacturer: Ritek Co.</code></pre>
 <pre><code>cdrdao write --speed 1 --swap --eject yourgame.cue</code></pre>
 <h2 id="playing-games-with-additonal-copy-protection-routines">Playing Games With Additonal Copy Protection Routines</h2>
 <p>Starting in late 1998, some PSX games began including additional copy protection code that is designed to prevent playing backup CD-R copies of a game. This additional copy protection originally could only detect the first type of mod-chips (known as ‘non-stealth’) and would only fail if it detected one. <strong>Tonyhax International does not trigger this type of anti-piracy copy protection on stock consoles and these games don’t require any patching by Tonyhax International.</strong></p>
-<p>Starting in early 1999, the additional copy protection code was upgraded to detect both and ‘non-stealth’ mod-chips and ‘traditional’ swap tricks (which don’t update TOC data). <strong>Tonyhax International also does not trigger this type of anti-piracy copy protection on stock consoles and these games don’t require any patching by Tonyhax International.</strong></p>
-<p>However, starting in mid 1999, the additional copy protection code was upgraded again. This updated copy protection code can detect ‘non-stealth’ mod-chips, ‘traditional’ swap tricks (which don’t update TOC data), and the authenticity of the disc currently running in the PSX console. <strong>This last check causes the anti-piracy copy protection routine to trigger on games booted with Tonyhax International unless you are using a SCPH-1000 or early SCPH-3000 Japanese PSX console model. All is not lost however, Tonyhax International is now capable of game-specific on the fly patching to bypass this type of anti-piracy copy protection routine on ALL consoles. Below is a list of games which require explicit game-specific anti-piracy bypass support to work and their current status of support as of the latest version of Tonyhax International.</strong></p>
+<p>Starting in mid 1999, the additional copy protection code was upgraded again. This updated copy protection code can detect ‘non-stealth’ mod-chips, ‘traditional’ swap tricks (which don’t update TOC data), and the authenticity of the disc currently running in the PSX console. <strong>This last check causes the anti-piracy copy protection routine to trigger on games booted with Tonyhax International unless you are using a SCPH-1000 or early SCPH-3000 Japanese PSX console model. All is not lost however, Tonyhax International is now capable of game-specific on the fly patching to bypass this type of anti-piracy copy protection routine on ALL consoles. Below is a list of games which require explicit game-specific anti-piracy bypass support to work and their current status of support as of the latest version of Tonyhax International.</strong></p>
 <p>If you find a game which triggers the ‘anti-piracy screen of death’ that is not listed below, or you want support to be added for a game that is not yet currently supported but is listed below, please open an <a href="https://github.com/alex-free/tonyhax/issues/new?assignees=&amp;labels=antipiracy&amp;template=antipiracy-issue.md&amp;title=">Anti-Piracy issue</a> on the <a href="https://github.com/alex-free/tonyhax">Tonyhax International Github</a>. I would eventually like every game that can trigger the anti-piracy copy protection routine when booted via Tonyhax International on a stock console to have a game specific bypass implemented for 100% compatibility.</p>
 <p>Some PAL games are using a different copy protection scheme known as LibCrypt protection. This protection can be bypassed by burning a backup CD-R in a <a href="https://github.com/Kippykip/SBITools">very specific way to keep the protection working</a>, or just by using an original authentic PAL PSX disc. <strong>Some PAL games may include both anti-piracy detection and LibCrypt detection, please open an <a href="https://github.com/alex-free/tonyhax/issues/new?assignees=&amp;labels=antipiracy&amp;template=antipiracy-issue.md&amp;title=">Anti-Piracy issue</a> on the <a href="https://github.com/alex-free/tonyhax">Tonyhax International Github</a> in such a case so that I can add support.</strong></p>
 <h3 id="animetic-story-game-1-card-captor-sakura">Animetic Story Game 1: Card Captor Sakura</h3>
@@ -1053,22 +1064,6 @@ Manufacturer: Ritek Co.</code></pre>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 1 GetTN command.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan.</li>
 </ul>
-<h3 id="biohazard-3-the-last-escape">Biohazard 3: The Last Escape</h3>
-<ul>
-<li>Versions Tested: <a href="http://redump.org/disc/10/">Japan Rev 0</a>, <a href="http://redump.org/disc/8357/">Japan Rev 1</a>, <a href="http://redump.org/disc/11674/">Japan Demo</a>.</li>
-<li>Versions With Anti-Piracy Screen: Japan Rev 0, Japan Rev 1, Japan Demo.</li>
-<li>When Is The Anti-Piracy Screen Check: On the disclaimer screen after the game boots, pause there.</li>
-<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 3 GetTN commands.</li>
-<li>Versions With Anti-Piracy Bypass Support: Japan Rev 0, Japan Rev 1, Japan Demo.</li>
-</ul>
-<h3 id="biohazard-gun-survivor">Biohazard Gun Survivor</h3>
-<ul>
-<li>Versions Tested: <a href="http://redump.org/disc/8102/">Japan</a>.</li>
-<li>Versions With Anti-Piracy Screen: Japan.</li>
-<li>When Is The Anti-Piracy Screen Check: On the disclaimer screen after the game boots, pause there.</li>
-<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 1 GetTN command.</li>
-<li>Versions With Anti-Piracy Bypass Support: Japan.</li>
-</ul>
 <h3 id="chase-the-express">Chase The Express</h3>
 <ul>
 <li>Versions Tested: Japan (<a href="http://redump.org/disc/5637/">Disc 1</a>, <a href="http://redump.org/disc/5638/">Disc 2</a>), <a href="http://redump.org/disc/6551/">Japan Demo 1</a>, <a href="http://redump.org/disc/19589/">Japan Demo 2</a>, Europe (<a href="http://redump.org/disc/27257/">Disc 1</a>, <a href="http://redump.org/disc/27258/">Disc 2</a>), France (<a href="http://redump.org/disc/28137/">Disc 1</a>, <a href="http://redump.org/disc/28138/">Disc 2</a>), Germany (<a href="http://redump.org/disc/7507/">Disc 1</a>, <a href="http://redump.org/disc/7508/">Disc 2</a>), Italy (<a href="http://redump.org/disc/28358/">Disc 1</a>, <a href="http://redump.org/disc/28359/">Disc 2</a>).</li>
@@ -1081,9 +1076,17 @@ Manufacturer: Ritek Co.</code></pre>
 <ul>
 <li>Versions Tested: <a href="http://redump.org/disc/3694/">Japan</a>, <a href="http://redump.org/disc/53590/">Japan Demo</a>.</li>
 <li>Versions With Anti-Piracy Screen: Japan.</li>
-<li>When Is The Anti-Piracy Screen Check: When first booting the game when the Naughty Dog box is first viable.</li>
+<li>When Is The Anti-Piracy Screen Check: When first booting the game when the Naughty Dog box is first visible.</li>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 14 GetTN commands.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan.</li>
+</ul>
+<h3 id="cool-boarders-2001">Cool Boarders 2001</h3>
+<ul>
+<li>Versions Tested: <a href="http://redump.org/disc/513/">USA</a>, <a href="http://redump.org/disc/42467/">USA Demo</a>.</li>
+<li>Versions With Anti-Piracy Screen: USA, USA Demo.</li>
+<li>When Is The Anti-Piracy Screen Check: During the first loading screen.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 1 GetTN commands.</li>
+<li>Versions With Anti-Piracy Bypass Support: USA, USA Demo.</li>
 </ul>
 <h3 id="dancing-stage-featuring-true-kiss-destination">Dancing Stage Featuring True Kiss Destination</h3>
 <ul>
@@ -1108,6 +1111,13 @@ Manufacturer: Ritek Co.</code></pre>
 <li>When Is The Anti-Piracy Screen Check: On the disclaimer screen after the game boots.</li>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 3 GetTN commands.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan, Japan Demo.</li>
+</ul>
+<h3 id="disneys-the-emperors-new-grove">Disney’s The Emperor’s New Grove</h3>
+<ul>
+<li>Versions With Anti-Piracy Screen: <a href="http://redump.org/disc/14583/">USA</a>, <a href="http://redump.org/disc/7565/">Europe</a>.</li>
+<li>When Is The Anti-Piracy Screen Check: Start a new game, after the first FMV on the first loading screen is when the check completes.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 1 GetTN commands.</li>
+<li>Versions With Anti-Piracy Bypass Support: USA, Europe.</li>
 </ul>
 <h3 id="exciting-bass-2">Exciting Bass 2</h3>
 <ul>
@@ -1253,6 +1263,14 @@ Manufacturer: Ritek Co.</code></pre>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 3 GetTN commands, 1 GetTD command.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan.</li>
 </ul>
+<h3 id="pocket-jiman">Pocket Jiman</h3>
+<ul>
+<li>Versions Tested: <a href="http://redump.org/disc/3189/">Japan</a></li>
+<li>Versions With Anti-Piracy Screen: Japan.</li>
+<li>When Is The Anti-Piracy Screen Check: Immediately.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTN commands, 1 GetTD command.</li>
+<li>Versions With Anti-Piracy Bypass Support: Japan.</li>
+</ul>
 <h3 id="popolocrois-monogatari-ii">PoPoLoCrois Monogatari II</h3>
 <ul>
 <li>Versions Tested: Japan (<a href="http://redump.org/disc/1653/">Disc 1</a>, <a href="http://redump.org/disc/1654/">Disc 2</a>, <a href="http://redump.org/disc/1651/">Disc 3</a>), <a href="http://redump.org/disc/57327/">Japan Demo</a></li>
@@ -1284,6 +1302,22 @@ Manufacturer: Ritek Co.</code></pre>
 <li>When Is The Anti-Piracy Screen Check: Immediately.</li>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 2 GetTN commands, 1 GetTD command.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan.</li>
+</ul>
+<h3 id="resident-evil-3-the-last-escape">Resident Evil 3: The Last Escape</h3>
+<ul>
+<li>Versions Tested: <a href="http://redump.org/disc/10/">Japan Rev 0</a>, <a href="http://redump.org/disc/8357/">Japan Rev 1</a>, <a href="http://redump.org/disc/11674/">Japan Demo</a>, <a href="http://redump.org/disc/126/">USA</a>, <a href="http://redump.org/disc/7312/">USA Demo</a>,<a href="http://redump.org/disc/496/">Europe</a>, <a href="http://redump.org/disc/9463/">Europe Demo</a>, <a href="http://redump.org/disc/9753/">France</a>, <a href="http://redump.org/disc/5526/">Germany</a>, <a href="http://redump.org/disc/16397/">Italy</a>, <a href="http://redump.org/disc/28197/">Ireland</a>, <a href="http://redump.org/disc/1387/">Spain</a>,</li>
+<li>Versions With Anti-Piracy Screen: Japan Rev 0, Japan Rev 1, Japan Demo.</li>
+<li>When Is The Anti-Piracy Screen Check: On the disclaimer screen after the game boots, pause there.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 3 GetTN commands.</li>
+<li>Versions With Anti-Piracy Bypass Support: Japan Rev 0, Japan Rev 1, Japan Demo.</li>
+</ul>
+<h3 id="resident-evil-survivor">Resident Evil: Survivor</h3>
+<ul>
+<li>Versions Tested: <a href="http://redump.org/disc/8102/">Japan</a>, <a href="http://redump.org/disc/326/">USA</a>, <a href="http://redump.org/disc/801/">Europe</a>, <a href="http://redump.org/disc/5826/">France</a>.</li>
+<li>Versions With Anti-Piracy Screen: Japan, USA.</li>
+<li>When Is The Anti-Piracy Screen Check: Immediately.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTD command, 1 GetTN command.</li>
+<li>Versions With Anti-Piracy Bypass Support: Japan, USA.</li>
 </ul>
 <h3 id="robbit-mon-dieu">Robbit mon Dieu</h3>
 <ul>
@@ -1349,12 +1383,12 @@ Manufacturer: Ritek Co.</code></pre>
 <li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTN command, 1 GetTD command.</li>
 <li>Versions With Anti-Piracy Bypass Support: <strong>TODO: NOT SUPPORTED YET</strong></li>
 </ul>
-<h3 id="tomba">Tomba!</h3>
+<h3 id="tomba-2-the-evil-swine-return">Tomba! 2: The Evil Swine Return</h3>
 <ul>
-<li>Versions Tested: <a href="http://redump.org/disc/8604/">USA</a>, <a href="http://redump.org/disc/15174/">USA Demo</a>.</li>
+<li>Versions Tested: <a href="http://redump.org/disc/16475/">USA</a>, <a href="http://redump.org/disc/32246/">USA Demo</a>, <a href="http://redump.org/disc/31192/">Europe</a>, <a href="http://redump.org/disc/31192/">France</a>, <a href="http://redump.org/disc/31192/">Germany</a>, <a href="http://redump.org/disc/41369/">Italy</a>, <a href="http://redump.org/disc/1582/">Spain</a>.</li>
 <li>Versions With Anti-Piracy Screen: USA.</li>
-<li>When Is The Anti-Piracy Screen Check: ?? Have played this for a bit, have not triggered it yet. I am guessing 1 ReadTOC command, 2 Test commands, 1 GetTN command, 1 GetTD command because AFAIK no American anti-piracy game doesn’t send ReadTOC.</li>
-<li>Type Of Check: ??</li>
+<li>When Is The Anti-Piracy Screen Check: Immediately.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 1 GetTN command, 1 GetTD command.</li>
 <li>Versions With Anti-Piracy Bypass Support: USA.</li>
 </ul>
 <h3 id="vandal-harts-ii">Vandal Harts II</h3>
@@ -1389,10 +1423,18 @@ Manufacturer: Ritek Co.</code></pre>
 <li>Type Of Check: 2 ReadTOC command, 4 Test commands, 6 GetTN commands, 6 GetTD commands.</li>
 <li>Versions With Anti-Piracy Bypass Support: Japan.</li>
 </ul>
+<h3 id="yu-gi-oh-forbidden-memories">Yu-Gi-Oh! Forbidden Memories</h3>
+<ul>
+<li>Versions Tested: <a href="http://redump.org/disc/4173/">Japan</a>, <a href="http://redump.org/disc/51546/">Japan Genteiban Edition</a>, <a href="http://redump.org/disc/820/">USA</a>, <a href="http://redump.org/disc/1053/">Europe</a>, <a href="http://redump.org/disc/28263/">France</a>, <a href="http://redump.org/disc/1256/">Germany</a>, <a href="http://redump.org/disc/30673/">Spain</a>, <a href="http://redump.org/disc/35297/">Italy</a>.</li>
+<li>Versions With Anti-Piracy Screen: Japan, Japan Genteiban Edition, USA, Europe, France, Germany, Spain, Italy.</li>
+<li>When Is The Anti-Piracy Screen Check: Immediately.</li>
+<li>Type Of Check: 1 ReadTOC command, 2 Test commands, 2 GetTN commands, 0 GetTD commands.</li>
+<li>Versions With Anti-Piracy Bypass Support: Japan, Japan Genteiban Edition, USA,</li>
+</ul>
 <h2 id="building-from-source">Building From Source</h2>
 <p>You can compile Tonyhax International from source using any operating system which supports <a href="https://crosstool-ng.github.io/">Crosstool-NG</a> using a script that builds a local tool-chain within the source directory that does not install anything into your system.</p>
 <p>If you are running <em>Fedora or Debian</em> (Windows Subsystem For Linux can run these operating systems on Windows to provide a sufficient build environment), you can download the build dependencies automatically with the <code>get-deps</code> script, which is in the <code>scripts</code> folder found in the Tonyhax International <a href="https//alex-free.github.io/tonyhax">source</a>. <strong>The only dependency the <code>get-deps</code> script does not install is <code>wine</code>.</strong>Wine is currently required because the ROM file must be made into a <a href="https://github.com/danhans42/nxflash">NXFlash</a> compatible format for the flasher CD, and currently that is done by the Windows program <code>romfile.exe</code> found in NXFlash.</p>
-<p>If you are running some other Linux distribution, a *BSD operating system, or something else that supports <a href="https://crosstool-ng.github.io/">Crosstool-NG</a> but is not yet supported by the <code>get-deps</code> script, you need to install the equivelent packages or software, including wine. Then everything should work nicely in the next step.</p>
+<p>If you are running some other Linux distribution, a *BSD operating system, or something else that supports <a href="https://crosstool-ng.github.io/">Crosstool-NG</a> but is not yet supported by the <code>get-deps</code> script, you need to install the equivalent packages or software, including wine. Then everything should work nicely in the next step.</p>
 <p>Now that all the dependencies are installed, you can build the tool chain which compiles Tonyhax International. The way this works is actually highly unusual, but I think extremely elegant and clean. First execute the <code>build-local-tool-chain</code> script, which is in the <code>scripts</code> folder found in the Tonyhax International <a href="https//alex-free.github.io/tonyhax">source</a>. <strong>As long as you installed all the required dependencies</strong> a tool chain will be built and configured to be locally installed within the <code>crosstool-ng</code> sub module folder found in the Tonyhax International source. This means that <em>nothing is changed on your system</em> by installing the tool chain with the <code>build-local-tool-chain</code> script as it is completely portable accessible in the Tonyhax International source itself.</p>
 <p>The <code>build-local-tool-chain</code> script also ensures that all sub modules are downloaded by running <code>git submodule update --init --recursive</code>. Now we can finally use the local tool chain to build Tonyhax International by running the script <code>./build-with-local-tool-chain</code>, found in the <code>scripts</code> directory of each Tonyhax International release. After you build Tonyhax International a release <code>.zip</code> file will be generated in the root of the source directory.</p>
 <h2 id="credits">Credits</h2>
