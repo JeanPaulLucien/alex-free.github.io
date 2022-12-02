@@ -32,6 +32,10 @@
 
 ## News
 
+### 12/2/2022
+
+[Tonyhax International](https://alex-free.github.io/tonyhax-international#downloads) has been updated to version 1.1.4.
+
 ### 11/30/2022
 
 [Tonyhax International](https://alex-free.github.io/tonyhax-international#downloads) has been updated to version 1.1.3.
