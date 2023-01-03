@@ -34,6 +34,10 @@
 
 ## News
 
+### 1/3/2023
+
+[Tonyhax International](https://alex-free.github.io/tonyhax-international#downloads) has been updated to version 1.1.7.
+
 ### 12/21/2022
 
 [CDRDAO-AF](https://alex-free.github.io/cdrdao) has been released.
