@@ -4,7 +4,7 @@
 
 *   [APrip](https://alex-free.github.io/aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games .
 
-*   [CDRDAO-AF](https://alex-free.github.io/cdrdao) - [CDRDAO](https://cdrdao.sourceforge.net/) fork that enables the use of the `--swap` argument correctly with the `generic-mmc-raw` driver. This fork is able to correctly burn any PSX game CD image which contains EDC-based additional copy protection.
+*   [CDRDAO-PLED](https://alex-free.github.io/cdrdao) - a portable Linux x86_64 download of the open source CD burning and ripping software [CDRDAO](https://cdrdao.sourceforge.net/). Documentation on using it to burn and rip disc images is also on this page.
 
 *   [Dreamcast CDI Burner](https://alex-free.github.io/dcdib) - Burn any Sega Dreamcast .CDI file on Linux .
 
@@ -35,6 +35,10 @@
 *   [Video2DreamcastDisc](https://alex-free.github.io/video2dreamcastdisc) - convert **any media file** for high quality playback on a real Sega Dreamcast.
 
 ## News
+
+### 1/31/2023
+
+[CDRDAO-PLED](https://alex-free.github.io/cdrdao) has now replaced the CDRDAO-AF [fork](https://github.com/alex-free/cdrdao/tree/dev) page due to my bug fix for CDRDAO being merged into upstream.
 
 ### 1/27/2023
 
