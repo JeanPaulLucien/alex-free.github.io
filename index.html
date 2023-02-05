@@ -7,17 +7,19 @@
   <title>home</title>
   <style>
     body {
-      backgroung: #888;
+      backgroung: #555;
       margin: 0 auto;
       max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
       hyphens: auto;
       word-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
+    }
+    div.content {
+      background: #888;
+      margin: 0 auto;
+      max-witdh: 1024px;
+      width: auto;
     }
     @media (max-width: 600px) {
       body {
@@ -30,10 +32,6 @@
         background-color: transparent;
         color: black;
         font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
       }
       h2, h3, h4 {
         page-break-after: avoid;
@@ -66,7 +64,7 @@
       margin-top: 0;
     }
     li {
-      color: #ddd;
+      color: #000;
     }
     blockquote {
       margin: 1em 0 1em 1.7em;
@@ -146,7 +144,8 @@
 <header id="title-block-header">
 <h1 class="title">home</h1>
 </header>
-  
+
+<div class="content">
 <h1 id="alex-free.github.io"><a href="https://alex-free.github.io">alex-free.github.io</a></h1>
 <h2 id="software">Software</h2>
 <ul>
@@ -211,5 +210,6 @@
 <p><a href="https://alex-free.github.io/psexe2rom#downloads">PSEXE2ROM</a> has been updated to version 1.0.1.</p>
 <h3 id="section-12">11/9/2022</h3>
 <p><a href="https://alex-free.github.io/tonyhax-international#downloads">Tonyhax International</a> has been updated to version 1.1.2.</p>
+  </div>
 </body>
 </html>
