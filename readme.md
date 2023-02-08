@@ -15,7 +15,7 @@
   <li>
     <a href="https://alex-free.github.io/aprip">APrip</a> - Patch out additional anti-piracy copy protection routines found in some later PSX games.</li>
   <li>
-    <a href="https://alex-free.github.io/cdrdao">CDRDAO-PLED</a> - a portable Linux x86_64 download of the open source CD burning and ripping software <a href="https://cdrdao.sourceforge.net/">CDRDAO</a>. Documentation on using it to burn and rip disc images is also on this page.</p></li>
+    <a href="https://alex-free.github.io/cdrdao">CDRDAO-PLED</a> - a portable Linux x86_64 download of the open source CD burning and ripping software <a href="https://cdrdao.sourceforge.net/">CDRDAO</a>. Documentation on using it to burn and rip disc images is also on this page.</li>
   <li>
     <a href="https://alex-free.github.io/dcdib">Dreamcast CDI Burner</a> - Burn any Sega Dreamcast .CDI file on Linux.</li>
   <li>
