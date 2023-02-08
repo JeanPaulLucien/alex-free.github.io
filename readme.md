@@ -9,13 +9,8 @@
   <![endif]-->
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">home</h1>
-</header>
-
 <div class="content">
-<h1 id="alex-free.github.io"><a href="https://alex-free.github.io">alex-free.github.io</a></h1>
-<h2 id="software">Software</h2>
+ <h2 id="software">Software</h2>
 <ul>
   <li>
     <a href="https://alex-free.github.io/aprip">APrip</a> - Patch out additional anti-piracy copy protection routines found in some later PSX games.</li>
