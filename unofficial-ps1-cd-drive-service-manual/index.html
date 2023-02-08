@@ -1,254 +1,649 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>really fixing ps1 cd drives</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-<body style="background-color:black; color:white;" link="#58D3F7" alink="#FF00FF" vlink="#58D3F7">
-
-<h1><a href=https://alex-free.github.io>alex-free.github.io</a></h1>
-
-<h1>The Unofficial PS1 CD Drive Service Manual</h1>
-
-<i>By Alex Free - v1.0.1 (10/3/2022)</i>
-
-<p>The PlayStation was released in Japan in 1994, and elsewhere in 1995. The last models where manufactured in 2006. In 2022 it is very common to run into PS1 CD drive related issues, in fact it can sometimes feel like a miracle if you can find a console without any problems still working in current year. Information about how to fix poorly performing CD drives for PlayStation consoles is scattered all over the internet at this point, with various truths and fictions about certain fixes and the issues that they address.</p>
-
-<p>A certain fix almost never talked about is to clean and then re-lubricate all the moving parts of the CD drive itself. The ideas behind this fix are as follows:</p>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Unofficial PSX CD Drive Service Manual</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #58D3F7;
+    }
+    a:visited {
+      color: #58D3F7;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      border: 2px double blue;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border: 2px double blue;
+    }
+    th {
+      border: 2px double blue;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+        border: 2px double blue;
+        padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Unofficial PSX CD Drive Service Manual</h1>
+</header>
+<p><a href="https://alex-free.github.io">alex-free.github.io</a></p>
+<p><em>By Alex Free</em> - Manual: v1.0.1 (2/8/2023)</p>
+<p>The PlayStation was released in Japan in 1994, and elsewhere in 1995.
+The last models where manufactured in 2006. In 2022 it is very common to
+run into PS1 CD drive related issues, in fact it can sometimes feel like
+a miracle if you can find a console without any problems still working
+in current year. Information about how to fix poorly performing CD
+drives for PlayStation consoles is scattered all over the internet at
+this point, with various truths and fictions about certain fixes and the
+issues that they address.</p>
+<p>A certain fix almost never talked about is to clean and then
+re-lubricate all the moving parts of the CD drive itself. The ideas
+behind this fix are as follows:</p>
 <ul>
-  <li>The CD drives worked great and could read CD-Rs and pressed CD-ROMs when new (even the launch units!).</li>
-  <li>CD drive technology was still evolving throughout the PlayStation's console life cycle. Early CD drive technology especially is prone to disc read errors when the expected level of friction encountered by the moving parts is out of spec.</li>
-  <li>The level of friction can increase and can cause disc read errors as the original grease used to lubricate the moving parts degrades with time due to age, loosing it's original effectiveness.</li>
-  <li>Most CD drive's have <b>perfectly functioning laser diodes</b>. A dying laser diode is most likely quite rare to actually encounter <b>if the laser resistance screw has never been modified before</b> (which can decrease laser resistance, increasing power out of spec for the diode, and possibly cause it to burn out faster).</li>
+<li>The CD drives worked great and could read CD-Rs and pressed CD-ROMs
+when new (even the launch units!).</li>
+<li>CD drive technology was still evolving throughout the PlayStation’s
+console life cycle. Early CD drive technology especially is prone to
+disc read errors when the expected level of friction encountered by the
+moving parts is out of spec.</li>
+<li>The level of friction can increase and can cause disc read errors as
+the original grease used to lubricate the moving parts degrades with
+time due to age, loosing it’s original effectiveness.</li>
+<li>Most CD drive’s have <strong>perfectly functioning laser
+diodes</strong>. A dying laser diode is most likely quite rare to
+actually encounter <strong>if the laser resistance screw has never been
+modified before</strong> (which can decrease laser resistance,
+increasing power out of spec for the diode, and possibly cause it to
+burn out faster).</li>
 </ul>
-
 <p>Simply following this service manual can:</p>
-
 <ul>
-    <li>Fix FMV stutters/glitches/playback failure.</li>
-
-    <li>Decrease previously abnormally high load times.</li>
-
-    <li>Make a console that normally only read discs if you turn the entire console vertical or upside down <b>(try this if you haven't yet!)</b> work in the correct, standard orientation.</li>
-
-    <li>Fix stuttering and or lag in games that steam a lot of data off of the disc during play.</li>
-
-    <li>Fix sudden cut-outs/silence during CD audio playback.</li>
-
-    <li>Stop the CD drive from constantly gets 'lost' trying to track the CD, sometimes causing runoff where the laser sled seeks all the way to the end of the disc before possibly completely 'giving up' reading the disc entirely.</li>
-
-    <li>Fix loud harsh noises coming from the CD Drive, such as clicking and rattling.</li>
+<li><p>Fix FMV stutters/glitches/playback failure.</p></li>
+<li><p>Decrease previously abnormally high load times.</p></li>
+<li><p>Make a console that normally only read discs if you turn the
+entire console vertical or upside down <strong>(try this if you haven’t
+yet!)</strong> work in the correct, standard orientation.</p></li>
+<li><p>Fix stuttering and or lag in games that steam a lot of data off
+of the disc during play.</p></li>
+<li><p>Fix sudden cut-outs/silence during CD audio playback.</p></li>
+<li><p>Stop the CD drive from constantly gets ‘lost’ trying to track the
+CD, sometimes causing runoff where the laser sled seeks all the way to
+the end of the disc before possibly completely ‘giving up’ reading the
+disc entirely.</p></li>
+<li><p>Fix loud harsh noises coming from the CD Drive, such as clicking
+and rattling.</p></li>
+<li><p><a href="#tools-used">Tools Used</a></p></li>
+<li><p><a href="#cleaning-all-moving-parts">Cleaning All Moving
+Parts</a></p></li>
+<li><p><a href="#lubricating-all-moving-parts">Lubricating All Moving
+Parts</a></p></li>
+<li><p><a href="#testing">Testing</a></p></li>
+<li><p><a href="#properly-obtaining-a-new-ps1-cd-drive-unit">Properly
+Obtaining A New PS1 CD Drive Unit</a></p></li>
 </ul>
-
+<h2 id="tools-used">Tools Used</h2>
+<p>This guide requires quite a few things to complete it. Before
+continuing you should have:</p>
 <ul>
-  <li><a href=#tools>Tools Used</a></li>
-  <li><a href=#cleaning>Cleaning All Moving Parts</a></li>
-  <li><a href=#lubricating>Lubricating All Moving Parts</a></li>
-  <li><a href=#testing>Testing</a></li>
-  <li><a href=#replacedrive>Properly Obtaining A New PS1 CD Drive Unit</a></li>
+<li>A Pack of clean, fine-tipped, thin, and very small
+paintbrushes..</li>
+<li>At least 2 clean toothbrushes.</li>
+<li>A tube of white lithium grease.</li>
+<li>A bottle of synthetic light clock oil containing no preservatives,
+with a funnel top.</li>
+<li>A can of WD-40.</li>
+<li>A bowl of clean water.</li>
+<li>A bowl of soapy water.</li>
+<li>A <code>flathead #2 screwdriver</code>.</li>
+<li>A <code>Phillips #00 screwdriver</code>.</li>
+<li>A <code>Phillips #1 screwdriver</code>.</li>
+<li>Paper towels.</li>
+<li>A clean high thread count microfiber cloth.</li>
 </ul>
-
-<h2>Tools Used</h2>
-
-<p>This guide requires quite a few things to complete it. Before continuing you should have:</p>
-
+<figure>
+<img src="images/1-tools.jpg" alt="tools" />
+<figcaption aria-hidden="true">tools</figcaption>
+</figure>
+<h2 id="cleaning-all-moving-parts">Cleaning All Moving Parts</h2>
+<p>The first thing to do is to remove and strip all the original
+lubrication from the CD drive. Any original lubrication in a PS1 CD
+drive has long since lost it’s ability to provide enough frictionless
+movement for the laser sled and spindle motor to operate optimally at
+this point in time due to the sheer age of the hardware itself. In order
+to do this, we need to completely remove the CD drive itself from the
+console. Once the CD drive is removed, the CD drive top case can then be
+removed as well giving access to every lubrication point in the CD
+drive.</p>
+<p>To remove the CD drive from the console, you must first do one
+specific task while the PlayStation is all assembled:</p>
 <ul>
-    <li>A Pack of clean, fine-tipped, thin, and very small paintbrushes..</li>
-    <li>At least 2 clean toothbrushes.</li>
-    <li>A tube of white lithium grease.</li>
-    <li>A bottle of synthetic light clock oil containing no preservatives, with a funnel top.</li>
-    <li>A can of WD-40.</li>
-    <li>A bowl of clean water.</li>
-    <li>A bowl of soapy water.</li>
-    <li>A <code>flathead #2 screwdriver</code>.</li>
-    <li>A <code>Phillips #00 screwdriver</code>.</li>
-    <li>A <code>Phillips #1 screwdriver</code>.</li>
-    <li>Paper towels.</li>
-    <li>A clean high thread count microfiber cloth.</li>
+<li>Connect the console up, put in an Audio CD, and power it on.</li>
+<li>Using the PlayStation CD Player play the audio track that is in the
+middle of the audio CD. I.e., if your audio CD has 18 tracks, play track
+9. If you have an odd amount of tracks, divide by 2 and round up
+(i.e. for 19 tracks play track 10). While the audio is playing, power
+off the PlayStation console. This will ‘lock’ the laser sled around the
+halfway point of the laser sled rails, allowing you to remove the CD
+drive top case later.</li>
 </ul>
-
-<p><img src="images/1-tools.jpg" alt="tools" height="400"></p>
-
-<a name=cleaning><h2>Cleaning All Moving Parts</h2></a>
-
-<p>The first thing to do is to remove and strip all the original lubrication from the CD drive. Any original lubrication in a PS1 CD drive has long since lost it's ability to provide enough frictionless movement for the laser sled and spindle motor to operate optimally at this point in time due to the sheer age of the hardware itself. In order to do this, we need to completely remove the CD drive itself from the console. Once the CD drive is removed, the CD drive top case can then be removed as well giving access to every lubrication point in the CD drive.</p>
-
-<p>To remove the CD drive from the console, you must first do one specific task while the PlayStation is all assembled:</p>
-
+<p>Now that the laser sled is in the right position, unplug any memory
+cards, remove the audio CD in the CD drive, and remove the power and
+video cables from the Playstation console. Flip the entire console
+upside down so that the model sticker is visible. Unscrew the 5
+<code>Phillips #1</code> screws on the bottom of the PlayStation
+console. After all screws are removed flip the PlayStation back over
+right side up. Take off the top case of the console by simply raising it
+off of the lower base, exposing the CD drive/motherboard.</p>
+<figure>
+<img src="images/2-console-bottom.jpg" alt="console bottom" />
+<figcaption aria-hidden="true">console bottom</figcaption>
+</figure>
+<figure>
+<img src="images/3-console-bottom-unscrewed.jpg"
+alt="console bottom unscrewed" />
+<figcaption aria-hidden="true">console bottom unscrewed</figcaption>
+</figure>
+<figure>
+<img src="images/4-console-top-case-removed.jpg"
+alt="console top case removed" />
+<figcaption aria-hidden="true">console top case removed</figcaption>
+</figure>
+<p>There are 2 different cables connecting the PS1 CD drive to the
+motherboard. The first one addressed is the laser ribbon cable, which is
+wide, thin, and red/orange. It is secured with a locking connector on
+the motherboard. Gently pull up on the left ‘wing’ of the locking
+socket, and then do the same to the right ‘wing’ on the right side of
+the locking socket. This will fully unlock the connector and release the
+laser ribbon cable. The laser ribbon cable can now be pulled gently out
+of the locking socket exposing it’s contacts.</p>
+<figure>
+<img src="images/5-laser-ribbon-left-unlock.jpg"
+alt="laser ribbon left unlock" />
+<figcaption aria-hidden="true">laser ribbon left unlock</figcaption>
+</figure>
+<figure>
+<img src="images/6-laser-ribbon-right-unlock.jpg"
+alt="laser ribbon right unlock" />
+<figcaption aria-hidden="true">laser ribbon right unlock</figcaption>
+</figure>
+<figure>
+<img src="images/7-laser-ribbon-loose.jpg" alt="laser ribbon loose" />
+<figcaption aria-hidden="true">laser ribbon loose</figcaption>
+</figure>
+<p>The second cable is what I dub the ‘power wires’. They are the thin
+multicolored group of wires connecting to a socket on the CD drive
+itself. Gently pull the power wires away from the socket on the CD drive
+itself to remove them, finally freeing the CD drive itself.</p>
+<figure>
+<img src="images/8-power-wires.jpg" alt="power wires" />
+<figcaption aria-hidden="true">power wires</figcaption>
+</figure>
+<figure>
+<img src="images/9-cd-drive-free.jpg" alt="cd drive free" />
+<figcaption aria-hidden="true">cd drive free</figcaption>
+</figure>
+<p>Unscrew the 2 <code>Phillips #00</code> screws on each side of the
+spindle motor which secure CD drive top case to the rest of the CD
+drive. Once these screws are removed, push the CD drive’s top case
+forward (away from the spindle motor). Once it slides over the CD drive
+a bit forward, start pushing diagonally away from the spindle motor and
+to the right. The CD drive top case should just slide right out,
+exposing the CD drive’s internals.</p>
+<figure>
+<img src="images/10-remove-cd-drive-top-case-1.jpg"
+alt="remove cd drive top case 1" />
+<figcaption aria-hidden="true">remove cd drive top case 1</figcaption>
+</figure>
+<figure>
+<img src="images/11-remove-cd-drive-top-case-2.jpg"
+alt="remove cd drive top case 2" />
+<figcaption aria-hidden="true">remove cd drive top case 2</figcaption>
+</figure>
+<figure>
+<img src="images/12-cd-drive-top-case-removed.jpg"
+alt="cd drive top case removed" />
+<figcaption aria-hidden="true">cd drive top case removed</figcaption>
+</figure>
+<p>With the CD drive top case now removed, we can get to work. Use a
+clean wet toothbrush (water or soapy water) to remove any remaining
+grease on all of the gears which connect the laser sled motor to the
+laser sled.</p>
+<figure>
+<img src="images/13-clean-top-sled-gears.jpg" alt="clean sled gears" />
+<figcaption aria-hidden="true">clean sled gears</figcaption>
+</figure>
+<p>Flip the CD drive over and make sure to get the bottom part of the
+laser sled motor gear as well.</p>
+<figure>
+<img src="images/14-clean-bottom-sled-gear.jpg"
+alt="clean bottom sled gear" />
+<figcaption aria-hidden="true">clean bottom sled gear</figcaption>
+</figure>
+<p>Next clean the bottom of the laser sled rails with a wet (water or
+soapy water) fine tipped paintbrush. Strip off all of the grease
+thoroughly on the rails.</p>
+<figure>
+<img src="images/15-clean-bottom-rails.jpg" alt="clean bottom rails" />
+<figcaption aria-hidden="true">clean bottom rails</figcaption>
+</figure>
+<p>Flip the CD drive back over and clean the top of the laser rails in
+the same way</p>
+<figure>
+<img src="images/16-clean-top-rails.jpg" alt="clean top rails" />
+<figcaption aria-hidden="true">clean top rails</figcaption>
+</figure>
+<p>With the laser rails and laser sled motor gears cleaned move on to
+the next area of interest, the spindle motor. This is the motor that
+spins the CD. The first thing the spindle motor needs is WD-40. Heavily
+douse a different clean fine tipped paintbrush in WD-40 and push the
+liquid from the brushes into the motor via the various access holes
+found on the bottom of the motor. Because the access holes are on the
+bottom of the motor, this means you will need to once again flip the
+entire CD drive upside down. Once WD-40 is in the motor, manually spin
+the spindle by hand a few times every few minutes for 30 minutes to
+further distribute the WD-40.</p>
+<figure>
+<img src="images/17-spindle-motor-wd40.jpg" alt="spindle motor WD-40" />
+<figcaption aria-hidden="true">spindle motor WD-40</figcaption>
+</figure>
+<p>Keep the CD drive upside down, let the WD-40 seep in for 30 minutes
+or so before continuing. After you’ve waited, give the laser sled motor
+WD-40 via it’s single access hole. Keep in mind this motor is much
+smaller.</p>
+<figure>
+<img src="images/18-sled-motor-wd40.jpg" alt="sled motor WD-40" />
+<figcaption aria-hidden="true">sled motor WD-40</figcaption>
+</figure>
+<h2 id="lubricating-all-moving-parts">Lubricating All Moving Parts</h2>
+<p>Keep the entire CD drive propped up vertically to let the WD-40 seep
+in for 30 minutes. After waiting, place the CD drive back flat, but
+still upside down. Take your <strong>synthetic light clock oil with no
+preservatives</strong> and put some oil in the access holes of the
+spindle motor. Once the oil is in the motor, manually spin the spindle
+by hand a few times every few minutes for 30 minutes to further
+distribute the oil.</p>
+<figure>
+<img src="images/19-oil-spindle-motor.jpg" alt="oil spindle motor" />
+<figcaption aria-hidden="true">oil spindle motor</figcaption>
+</figure>
+<p>After you’ve waited, give the laser sled motor <strong>synthetic
+light clock oil with no preservatives</strong> via it’s single access
+hole. Keep in mind this motor is much smaller.</p>
+<figure>
+<img src="images/20-oil-sled-motor.jpg" alt="oil sled motor" />
+<figcaption aria-hidden="true">oil sled motor</figcaption>
+</figure>
+<p>Keep the CD drive once again vertical for 30 minutes to let the oil
+seep into the laser sled motor.</p>
+<figure>
+<img src="images/21-sled-motor-dry.jpg" alt="sled motor dry" />
+<figcaption aria-hidden="true">sled motor dry</figcaption>
+</figure>
+<p>Now that the liquids in each motor are settled, move on to
+lubricating the laser sled gears. Flip the CD drive back right side up.
+Put some white lithium gears on a clean toothbrush, and brush the sled
+motor top gears.</p>
+<figure>
+<img src="images/22-grease-sled-motor-top-gears.jpg"
+alt="grease sled motor top gears" />
+<figcaption aria-hidden="true">grease sled motor top gears</figcaption>
+</figure>
+<p>Flip the CD drive upside down again and brush the bottom sled motor
+gear.</p>
+<figure>
+<img src="images/23-grease-sled-motor-bottom-gear.jpg"
+alt="grease sled motor bottom gear" />
+<figcaption aria-hidden="true">grease sled motor bottom
+gear</figcaption>
+</figure>
+<p>After the laser sled motor gears are all thoroughly lubricated with
+white lithium grease, do the same to the laser sled rails.</p>
+<figure>
+<img src="images/24-grease-bottom-sled-rails.jpg"
+alt="grease bottom sled rails" />
+<figcaption aria-hidden="true">grease bottom sled rails</figcaption>
+</figure>
+<p>Flip the CD drive back over right side up and do the same to the top
+of the laser sled rails.</p>
+<figure>
+<img src="images/25-grease-top-sled-rails.jpg"
+alt="grease top sled rails" />
+<figcaption aria-hidden="true">grease top sled rails</figcaption>
+</figure>
+<p>Now that every moving part has been cleaned and lubricated, put the
+laser ribbon cable back into it’s slot and put the CD drive top case
+back on. To put the CD drive top case back on you want to come in from
+the right and press down to slide it carefully under/around the spindle
+itself.</p>
+<figure>
+<img src="images/26-put-laser-ribbon-cable-back.jpg"
+alt="put laser ribbon cable back" />
+<figcaption aria-hidden="true">put laser ribbon cable back</figcaption>
+</figure>
+<figure>
+<img src="images/27-put-cd-drive-top-case-on-1.jpg"
+alt="put cd drive top case on 1" />
+<figcaption aria-hidden="true">put cd drive top case on 1</figcaption>
+</figure>
+<p>Screw back in the <code>Phillips #00</code> screws to secure the CD
+drive top case to the CD drive.</p>
+<figure>
+<img src="images/28-put-cd-drive-top-case-on-2.jpg"
+alt="put cd drive top case on 2" />
+<figcaption aria-hidden="true">put cd drive top case on 2</figcaption>
+</figure>
+<p>Plug the ‘power wires’ (multi-colored group of wires) back into the
+socket on the CD drive.</p>
+<figure>
+<img src="images/29-put-power-wires-back.jpg"
+alt="put power wires back" />
+<figcaption aria-hidden="true">put power wires back</figcaption>
+</figure>
+<p>Slide the laser ribbon cable back into it’s (currently unlocked)
+socket.</p>
+<figure>
+<img src="images/30-put-laser-ribbon-cable-back.jpg"
+alt="put laser ribbon cable back" />
+<figcaption aria-hidden="true">put laser ribbon cable back</figcaption>
+</figure>
+<p>Start locking the laser ribbon connector by first pressing down the
+left side.</p>
+<figure>
+<img src="images/31-lock-left-laser-ribbon-cable-socket.jpg"
+alt="lock left laser ribbon cable socket" />
+<figcaption aria-hidden="true">lock left laser ribbon cable
+socket</figcaption>
+</figure>
+<p>Once the left side of the laser ribbon connector is fully pressed in,
+do the same to the right side to secure the laser ribbon cable.</p>
+<figure>
+<img src="images/32-lock-right-laser-ribbon-cable-socket.jpg"
+alt="lock right laser ribbon cable socket" />
+<figcaption aria-hidden="true">lock right laser ribbon cable
+socket</figcaption>
+</figure>
+<p>Now that everything is into place, check your PlayStation to see if
+you have 2 screws near the laser ribbon socket connector like below.</p>
+<figure>
+<img src="images/33-bias-gain-screws.jpg" alt="bias and gain screws" />
+<figcaption aria-hidden="true">bias and gain screws</figcaption>
+</figure>
+<p><strong>If you do not see these screws, you are done and can now <a
+href="#test">test</a> your self-refurbished CD drive!</strong> If you do
+see these screws, keep continuing in the guide below.</p>
+<h2 id="manual-bias-adjustments">Manual Bias Adjustments</h2>
+<p>On the early consoles the bias and gain values are not automatically
+adjusted by the PS1 motherboard like on all newer PS1 console revisions.
+They are manually set by the bias screw and the gain screw. When you get
+a new CD drive connected the bias and gain values may change from what
+they should be, or you may find that the CD drive does not work as well
+as it can without slight adjustments to these values. If you measure the
+bias value to not be <code>1.634v</code> in an ‘idle’ state (no CD in
+drive/drive open), and if the gain value is not around
+<code>1.825v</code> measured while playing CD audio, consider changing
+them to these values (as described in the process below) as it can
+further improve disc reading performance, especially in regards to
+burned CD-R media.</p>
+<p>To first measure the current bias value on the motherboard, power on
+the PlayStation console with the CD drive connected, but with no disc on
+the CD Drive spindle. Leave the lid sensor unblocked. The console is in
+an ‘idle’ state like this. Using a multi-meter set to measure voltage,
+connect the positive lead to the bias point (as displayed in the image
+below) and the negative lead to anywhere on the top metal shielding of
+the PS1 console found under the CD drive to ground the Bias point. The
+voltage value your multi-meter displays while your console is in ‘idle’
+is the current bias value that your motherboard is set to.</p>
+<figure>
+<img src="images/34-get-current-bias.jpg" alt="get current bias" />
+<figcaption aria-hidden="true">get current bias</figcaption>
+</figure>
+<p>To secondly measure the gain value on the motherboard, Go into the CD
+Player on the console (which should still be powered on at this point).
+Place an audio CD on the exposed CD drive’s spindle. Tape down the lid
+sensor at the top right of the exposed lower case of the PlayStation
+console (this is a black switch when the top case of the console is
+removed). Keep the negative lead grounded on the metal shield found
+around the motherboard and below the installed CD drive. Play any audio
+track on the CD. While the audio is playing put the positive lead of
+your multi-meter back on the same bias point you measured before. The
+voltage reading will have slightly changed, this is the gain value found
+currently on your motherboard.</p>
+<figure>
+<img src="images/35-get-current-gain.jpg" alt="get current gain" />
+<figcaption aria-hidden="true">get current gain</figcaption>
+</figure>
+<p>To change your bias value to <code>1.634v</code>, untape the lid
+sensor (unblocking it and stopping the spindle motor) and remove the CD
+from the CD drive’s exposed spindle to put the console back into an
+‘idle’ state. Keep the negative lead of the multi-meter grounded on the
+metal shield found around the motherboard and below the installed CD
+drive. Put the positive lead of your multi-meter back on the Bias point.
+Use a <code>flathead #2 screwdriver</code> to very slightly change the
+bias screw’s position on the motherboard, rotating the screw until you
+get to that value. Rotate <strong>CLOCKWISE to increase the Bias voltage
+value</strong> on the multi-meter. Rotate <strong>COUNTER-CLOCKWISE to
+decrease the Bias voltage value</strong> on the multi-meter.</p>
+<figure>
+<img src="images/36-change-bias.jpg" alt="change bias" />
+<figcaption aria-hidden="true">change bias</figcaption>
+</figure>
+<p>After setting the bias value, you can set the gain value. You should
+still be in the CD Player on the console at this point of the guide.
+Place an audio CD or a PS1 game containing CD audio (backup or real PS1
+disc both work for this) on the exposed CD drive’s spindle. Tape down
+the lid sensor at the top right of the exposed lower case of the
+PlayStation console. This is a black button when the top case of the
+console is removed). Keep the negative lead of the multi-meter grounded
+on the metal shield found around the motherboard and below the installed
+CD drive. Play any audio track on the CD. While the audio is playing put
+the positive lead of your multi-meter back on the bias point. While
+taking the current gain voltage reading use a
+<code>flathead #2 screwdriver</code> to very slightly change the bias
+screw’s position on the motherboard, rotating the screw until you get to
+that value. <strong>Rotate CLOCKWISE to decrease the gain
+voltage</strong> reading. This is because gain is a value to subtract
+from the Bias. Rotate <strong>COUNTER-CLOCKWISE to increase the gain
+voltage</strong> reading. This is because gain is a value to subtract
+from the Bias.</p>
+<figure>
+<img src="images/37-change-gain.jpg" alt="change gain" />
+<figcaption aria-hidden="true">change gain</figcaption>
+</figure>
+<p><strong>NOTE:</strong>Many places online constantly state that the
+Bias should be 1.7v and the Gain should be 1.82v. This info is mostly
+coming from this website: <a
+href="http://dogbreath.de/PS1/LaserAlignment/Laser.html">http://dogbreath.de/PS1/LaserAlignment/Laser.html</a>.
+In my experience, the Bias value of 1.7v is too high. It seems to make
+it harder for the laser sled to track spinning discs, and can make drive
+runoff happen (which is when the laser sled seeks all the way out to the
+end of a spinning disc and gives up reading the disc altogether). So I
+do not personally recommend this Bias and Gain value combination.</p>
+<h2 id="testing">Testing</h2>
+<p>Remove any CD from the exposed CD drive’s spindle. <strong>With your
+clean high thread count microfiber cloth clean off the laser lens
+itself.</strong> Put the top case of the console back on by sliding it
+down upon the lower base. I recommend to not put the screws back into
+place just yet, just in case you find you still have some more tweaks to
+do after performing the tests below.</p>
+<figure>
+<img src="images/38-put-on-top-case.jpg" alt="put on top case" />
+<figcaption aria-hidden="true">put on top case</figcaption>
+</figure>
 <ul>
-  <li>Connect the console up, put in an Audio CD, and power it on.</li>
-  <li>Using the PlayStation CD Player play the audio track that is in the middle of the audio CD. I.e., if your audio CD has 18 tracks, play track 9. If you have an odd amount of tracks, divide by 2 and round up (i.e. for 19 tracks play track 10). While the audio is playing, power off the PlayStation console. This will 'lock' the laser sled around the halfway point of the laser sled rails, allowing you to remove the CD drive top case later.</li>
+<li>The first test is to go to the CD player and play a CD. Seek around
+the beginning of the CD disc (play the first audio track) and the end of
+the disc (play the last audio track) to move the laser sled (and the
+grease) and the new lubrication around inside the CD drive. Listen to
+how the CD drive sounds. After everything you’ve done it should be very
+quiet for a PS1 CD drive. The laser sled seeking should sound clean and
+concise (if it does not apply more white lithium grease to the rails,
+make sure everything has a decent even coat). The spindle motor should
+not rattle (if it does put more WD-40 and then later synthetic light
+clock oil without preservatives all over again).</li>
+<li>With audio CDs playing well, move on to the big guns and start a
+game with FMVs and also preferably containing CD audio (such as Dead Or
+Alive). Put in a decently long play session immediately after. FMVs
+should not skip. CD audio should not skip. The ultimate test might be
+something like playing the game Fear Effect, which has streaming FMV
+backgrounds during game play and a ton of FMVS.</li>
+<li>I definitely recommend playing some games for an hour or 2
+immediately after your refurbishment to make sure your repairs were
+successful. Game choice is really up to you.</li>
 </ul>
-
-<p>Now that the laser sled is in the right position, unplug any memory cards, remove the audio CD in the CD drive, and remove the power and video cables from the Playstation console. Flip the entire console upside down so that the model sticker is visible. Unscrew the 5 <code>Phillips #1</code> screws on the bottom of the PlayStation console. After all screws are removed flip the PlayStation back over right side up. Take off the top case of the console by simply raising it off of the lower base, exposing the CD drive/motherboard.</p>
-
-<p><img src="images/2-console-bottom.jpg" alt="console bottom" height="400"></p>
-
-<p><img src="images/3-console-bottom-unscrewed.jpg" alt="console bottom unscrewed" height="400"></p>
-
-<p><img src="images/4-console-top-case-removed.jpg" alt="console top case removed" height="400"></p>
-
-<p>There are 2 different cables connecting the PS1 CD drive to the motherboard. The first one addressed is the laser ribbon cable, which is wide, thin, and red/orange. It is secured with a locking connector on the motherboard. Gently pull up on the left 'wing' of the locking socket, and then do the same to the right 'wing' on the right side of the locking socket. This will fully unlock the connector and release the laser ribbon cable. The laser ribbon cable can now be pulled gently out of the locking socket exposing it's contacts.</p>
-
-<p><img src="images/5-laser-ribbon-left-unlock.jpg" alt="laser ribbon left unlock" height="400"></p>
-
-<p><img src="images/6-laser-ribbon-right-unlock.jpg" alt="laser ribbon right unlock" height="400"></p>
-
-<p><img src="images/7-laser-ribbon-loose.jpg" alt="laser ribbon loose" height="400"></p>
-
-<p>The second cable is what I dub the 'power wires'. They are the thin multicolored group of wires connecting to a socket on the CD drive itself. Gently pull the power wires away from the socket on the CD drive itself to remove them, finally freeing the CD drive itself.</p>
-
-<p><img src="images/8-power-wires.jpg" alt="power wires" height="400"></p>
-
-<p><img src="images/9-cd-drive-free.jpg" alt="cd drive free" height="400"></p>
-
-<p>Unscrew the 2 <code>Phillips #00</code> screws on each side of the spindle motor which secure CD drive top case to the rest of the CD drive. Once these screws are removed, push the CD drive's top case forward (away from the spindle motor). Once it slides over the CD drive a bit forward, start pushing diagonally away from the spindle motor and to the right. The CD drive top case should just slide right out, exposing the CD drive's internals.</p>
-
-<p><img src="images/10-remove-cd-drive-top-case-1.jpg" alt="remove cd drive top case 1" height="400"></p>
-
-<p><img src="images/11-remove-cd-drive-top-case-2.jpg" alt="remove cd drive top case 2" height="400"></p>
-
-<p><img src="images/12-cd-drive-top-case-removed.jpg" alt="cd drive top case removed" height="400"></p>
-
-<p>With the CD drive top case now removed, we can get to work. Use a clean wet toothbrush (water or soapy water) to remove any remaining grease on all of the gears which connect the laser sled motor to the laser sled.</p>
-
-<p><img src="images/13-clean-top-sled-gears.jpg" alt="clean sled gears" height="400"></p>
-
-<p>Flip the CD drive over and make sure to get the bottom part of the laser sled motor gear as well.</p>
-
-<p><img src="images/14-clean-bottom-sled-gear.jpg" alt="clean bottom sled gear" height="400"></p>
-
-<p>Next clean the bottom of the laser sled rails with a wet (water or soapy water) fine tipped paintbrush. Strip off all of the grease thoroughly on the rails.</p>
-
-<p><img src="images/15-clean-bottom-rails.jpg" alt="clean bottom rails" height="400"></p>
-
-<p>Flip the CD drive back over and clean the top of the laser rails in the same way</p>
-
-<p><img src="images/16-clean-top-rails.jpg" alt="clean top rails" height="400"></p>
-
-<p>With the laser rails and laser sled motor gears cleaned move on to the next area of interest, the spindle motor. This is the motor that spins the CD. The first thing the spindle motor needs is WD-40. Heavily douse a different clean fine tipped paintbrush in WD-40 and push the liquid from the brushes into the motor via the various access holes found on the bottom of the motor. Because the access holes are on the bottom of the motor, this means you will need to once again flip the entire CD drive upside down. Once WD-40 is in the motor, manually spin the spindle by hand a few times every few minutes for 30 minutes to further distribute the WD-40.</p>
-
-<p><img src="images/17-spindle-motor-wd40.jpg" alt="spindle motor WD-40" height="400"></p>
-
-<p>Keep the CD drive upside down, let the WD-40 seep in for 30 minutes or so before continuing. After you've waited, give the laser sled motor WD-40 via it's single access hole. Keep in mind this motor is much smaller.</p>
-
-<p><img src="images/18-sled-motor-wd40.jpg" alt="sled motor WD-40" height="400"></p>
-
-<a name=lubricating><h2>Lubricating All Moving Parts</h2></a>
-
-<p>Keep the entire CD drive propped up vertically to let the WD-40 seep in for 30 minutes. After waiting, place the CD drive back flat, but still upside down. Take your <b>synthetic light clock oil with no preservatives</b> and put some oil in the access holes of the spindle motor. Once the oil is in the motor, manually spin the spindle by hand a few times every few minutes for 30 minutes to further distribute the oil.</p>
-
-<p><img src="images/19-oil-spindle-motor.jpg" alt="oil spindle motor" height="400"></p>
-
-<p>After you've waited, give the laser sled motor <b>synthetic light clock oil with no preservatives</b> via it's single access hole. Keep in mind this motor is much smaller.</p>
-
-<p><img src="images/20-oil-sled-motor.jpg" alt="oil sled motor" height="400"></p>
-
-<p>Keep the CD drive once again vertical for 30 minutes to let the oil seep into the laser sled motor.</p>
-
-<p><img src="images/21-sled-motor-dry.jpg" alt="sled motor dry" height="400"></p>
-
-<p>Now that the liquids in each motor are settled, move on to lubricating the laser sled gears. Flip the CD drive back right side up. Put some white lithium gears on a clean toothbrush, and brush the sled motor top gears.</p>
-
-<p><img src="images/22-grease-sled-motor-top-gears.jpg" alt="grease sled motor top gears" height="400"></p>
-
-<p>Flip the CD drive upside down again and brush the bottom sled motor gear.</p>
-
-<p><img src="images/23-grease-sled-motor-bottom-gear.jpg" alt="grease sled motor bottom gear" height="400"></p>
-
-<p>After the laser sled motor gears are all thoroughly lubricated with white lithium grease, do the same to the laser sled rails.</p>
-
-<p><img src="images/24-grease-bottom-sled-rails.jpg" alt="grease bottom sled rails" height="400"></p>
-
-<p>Flip the CD drive back over right side up and do the same to the top of the laser sled rails.</p>
-
-<p><img src="images/25-grease-top-sled-rails.jpg" alt="grease top sled rails" height="400"></p>
-
-<p>Now that every moving part has been cleaned and lubricated, put the laser ribbon cable back into it's slot and put the CD drive top case back on. To put the CD drive top case back on you want to come in from the right and press down to slide it carefully under/around the spindle itself.</p>
-
-<p><img src="images/26-put-laser-ribbon-cable-back.jpg" alt="put laser ribbon cable back" height="400"></p>
-
-<p><img src="images/27-put-cd-drive-top-case-on-1.jpg" alt="put cd drive top case on 1" height="400"></p>
-
-<p>Screw back in the <code>Phillips #00</code> screws to secure the CD drive top case to the CD drive.
-
-<p><img src="images/28-put-cd-drive-top-case-on-2.jpg" alt="put cd drive top case on 2" height="400"></p>
-
-<p>Plug the 'power wires' (multi-colored group of wires) back into the socket on the CD drive.</p>
-
-<p><img src="images/29-put-power-wires-back.jpg" alt="put power wires back" height="400"></p>
-
-<p>Slide the laser ribbon cable back into it's (currently unlocked) socket.</p>
-
-<p><img src="images/30-put-laser-ribbon-cable-back.jpg" alt="put laser ribbon cable back" height="400"></p>
-
-<p>Start locking the laser ribbon connector by first pressing down the left side.</p>
-
-<p><img src="images/31-lock-left-laser-ribbon-cable-socket.jpg" alt="lock left laser ribbon cable socket" height="400"></p>
-
-<p>Once the left side of the laser ribbon connector is fully pressed in, do the same to the right side to secure the laser ribbon cable.</p>
-
-<p><img src="images/32-lock-right-laser-ribbon-cable-socket.jpg" alt="lock right laser ribbon cable socket" height="400"></p>
-
-<p>Now that everything is into place, check your PlayStation to see if you have 2 screws near the laser ribbon socket connector like below.</p>
-
-<p><img src="images/33-bias-gain-screws.jpg" alt="bias and gain screws" height="400"></p>
-
-<p><b>If you do not see these screws, you are done and can now <a href=#test>test</a> your self-refurbished CD drive!</b> If you do see these screws, keep continuing in the guide below.</p>
-
-<a name=bias><h2>Manual Bias Adjustments</h2></a>
-
- <p>On the early consoles the bias and gain values are not automatically adjusted by the PS1 motherboard like on all newer PS1 console revisions. They are manually set by the bias screw and the gain screw. When you get a new CD drive connected the bias and gain values may change from what they should be, or you may find that the CD drive does not work as well as it can without slight adjustments to these values. If you measure the bias value to not be <code>1.634v</code> in an 'idle' state (no CD in drive/drive open), and if the gain value is not around <code>1.825v</code> measured while playing CD audio, consider changing them to these values (as described in the process below) as it can further improve disc reading performance, especially in regards to burned CD-R media.</p>
-
-<p>To first measure the current bias value on the motherboard, power on the PlayStation console with the CD drive connected, but with no disc on the CD Drive spindle. Leave the lid sensor unblocked. The console is in an 'idle' state like this. Using a multi-meter set to measure voltage, connect the positive lead to the bias point (as displayed in the image below) and the negative lead to anywhere on the top metal shielding of the PS1 console found under the CD drive to ground the Bias point. The voltage value your multi-meter displays while your console is in 'idle' is the current bias value that your motherboard is set to.</p>
-
-<p><img src="images/34-get-current-bias.jpg" alt="get current bias" height="400"></p>
-
-<p>To secondly measure the gain value on the motherboard, Go into the CD Player on the console (which should still be powered on at this point). Place an audio CD on the exposed CD drive's spindle. Tape down the lid sensor at the top right of the exposed lower case of the PlayStation console (this is a black switch when the top case of the console is removed). Keep the negative lead grounded on the metal shield found around the motherboard and below the installed CD drive. Play any audio track on the CD. While the audio is playing put the positive lead of your multi-meter back on the same bias point you measured before. The voltage reading will have slightly changed, this is the gain value found currently on your motherboard.</p>
-
-<p><img src="images/35-get-current-gain.jpg" alt="get current gain" height="400"></p>
-
-<p>To change your bias value to <code>1.634v</code>, untape the lid sensor (unblocking it and stopping the spindle motor) and remove the CD from the CD drive's exposed spindle to put the console back into an 'idle' state. Keep the negative lead of the multi-meter grounded on the metal shield found around the motherboard and below the installed CD drive. Put the positive lead of your multi-meter back on the Bias point. Use a <code>flathead #2 screwdriver</code> to very slightly change the bias screw's position on the motherboard, rotating the screw until you get to that value. Rotate <b>CLOCKWISE to increase the Bias voltage value</b> on the multi-meter. Rotate <b>COUNTER-CLOCKWISE to decrease the Bias voltage value</b> on the multi-meter.</p>
-
-<p><img src="images/36-change-bias.jpg" alt="change bias" height="400"></p>
-
-<p>After setting the bias value, you can set the gain value. You should still be in the CD Player on the console at this point of the guide. Place an audio CD or a PS1 game containing CD audio (backup or real PS1 disc both work for this) on the exposed CD drive's spindle. Tape down the lid sensor at the top right of the exposed lower case of the PlayStation console. This is a black button when the top case of the console is removed). Keep the negative lead of the multi-meter grounded on the metal shield found around the motherboard and below the installed CD drive. Play any audio track on the CD. While the audio is playing put the positive lead of your multi-meter back on the bias point. While taking the current gain voltage reading use a <code>flathead #2 screwdriver</code> to very slightly change the bias screw's position on the motherboard, rotating the screw until you get to that value. <b>Rotate CLOCKWISE to decrease the gain voltage</b> reading. This is because gain is a value to subtract from the Bias. Rotate <b>COUNTER-CLOCKWISE to increase the gain voltage</b> reading. This is because gain is a value to subtract from the Bias.</p>
-
-<p><img src="images/37-change-gain.jpg" alt="change gain" height="400"></p>
-
-<p><b>NOTE:</b>Many places online constantly state that the Bias should be 1.7v and the Gain should be 1.82v. This info is mostly coming from this website: <a href=http://dogbreath.de/PS1/LaserAlignment/Laser.html>http://dogbreath.de/PS1/LaserAlignment/Laser.html</a>. In my experience, the Bias value of 1.7v is too high. It seems to make it harder for the laser sled to track spinning discs, and can make drive runoff happen (which is when the laser sled seeks all the way out to the end of a spinning disc and gives up reading the disc altogether). So I do not personally recommend this Bias and Gain value combination.</p>
-
-<h2><a name=testing>Testing</a></h2>
-
-<p>Remove any CD from the exposed CD drive's spindle. <b>With your clean high thread count microfiber cloth clean off the laser lens itself.</b> Put the top case of the console back on by sliding it down upon the lower base. I recommend to not put the screws back into place just yet, just in case you find you still have some more tweaks to do after performing the tests below.</p>
-
-<p><img src="images/38-put-on-top-case.jpg" alt="put on top case" height="400"></p>
-
-<ul>
-  <li>The first test is to go to the CD player and play a CD. Seek around the beginning of the CD disc (play the first audio track) and the end of the disc (play the last audio track) to move the laser sled (and the grease) and the new lubrication around inside the CD drive. Listen to how the CD drive sounds. After everything you've done it should be very quiet for a PS1 CD drive. The laser sled seeking should sound clean and concise (if it does not apply more white lithium grease to the rails, make sure everything has a decent even coat). The spindle motor should not rattle (if it does put more WD-40 and then later synthetic light clock oil without preservatives all over again).</li>
-
-  <li>With audio CDs playing well, move on to the big guns and start a game with FMVs and also preferably containing CD audio (such as Dead Or Alive). Put in a decently long play session immediately after. FMVs should not skip. CD audio should not skip. The ultimate test might be something like playing the game Fear Effect, which has streaming FMV backgrounds during game play and a ton of FMVS.</li>
-
-  <li>I definitely recommend playing some games for an hour or 2 immediately after your refurbishment to make sure your repairs were successful. Game choice is really up to you.</li>
-</ul>
-
 <p>Congratulations, you have completed the guide!</p>
-
-<a name=credits><h2>Credits</h2></a>
-
+<h2 id="credits">Credits</h2>
 <ul>
-  <li>The <a href=http://www.psxdev.net/forum/viewtopic.php?t=1113>Lubrication</a> thread on <a href=https://psxdev.net>PSXDEV</a> discussing the wonders of re-lubrication in the CD drive</li>
-  <li>The <a href=http://dogbreath.de/PS1/LaserAlignment/Laser.html>Laser Alignment in a Sony Playstation SCPH1002 </a> page by Mick Feuerbacher.</li>
-  <li>The <a href=https://yesterware.blogspot.com/2020/10/what-ive-learned-fixing-optical-drives.html>What I've Learned Fixing Optical Drives</a> page by  samson7point1.</li>
+<li>The <a
+href="http://www.psxdev.net/forum/viewtopic.php?t=1113">Lubrication</a>
+thread on <a href="https://psxdev.net">PSXDEV</a> discussing the wonders
+of re-lubrication in the CD drive</li>
+<li>The <a
+href="http://dogbreath.de/PS1/LaserAlignment/Laser.html">Laser Alignment
+in a Sony Playstation SCPH1002</a> page by Mick Feuerbacher.</li>
+<li>The <a
+href="https://yesterware.blogspot.com/2020/10/what-ive-learned-fixing-optical-drives.html">What
+I’ve Learned Fixing Optical Drives</a> page by samson7point1.</li>
 </ul>
-
-<a name=replacedrive><h2>Properly Obtaining A New PS1 CD Drive Unit</h2></a>
-
-<p>While refurbishing and servicing PS1 CD drives can in many cases get a problematic drive working like new again, this is not always the case if hardware failures such as the laser diode itself burning out occur. In such a case it is best to replace the entire PS1 CD drive with a different one that either works, or can work after refurbishment.</p>
-
-<p>The <b>best</b> way to get a replacement CD drive if you end up needing one is to simply buy a working PS1 console and pull an original Sony manufactured CD drive from it for use in your desired target console. PSone consoles are your best bet for a working CD drive as they are the newest ones made and most likely have the least amount of wear. However, other models of the console can also work just fine.</p>
-
-
+<h2 id="properly-obtaining-a-new-ps1-cd-drive-unit">Properly Obtaining A
+New PS1 CD Drive Unit</h2>
+<p>While refurbishing and servicing PS1 CD drives can in many cases get
+a problematic drive working like new again, this is not always the case
+if hardware failures such as the laser diode itself burning out occur.
+In such a case it is best to replace the entire PS1 CD drive with a
+different one that either works, or can work after refurbishment.</p>
+<p>The <strong>best</strong> way to get a replacement CD drive if you
+end up needing one is to simply buy a working PS1 console and pull an
+original Sony manufactured CD drive from it for use in your desired
+target console. PSone consoles are your best bet for a working CD drive
+as they are the newest ones made and most likely have the least amount
+of wear. However, other models of the console can also work just
+fine.</p>
 </body>
 </html>
